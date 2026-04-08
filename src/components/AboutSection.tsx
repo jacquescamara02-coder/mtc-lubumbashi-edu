@@ -3,8 +3,8 @@ import logo from "@/assets/logo-mtc.jpg";
 
 const stats = [
   { icon: Users, label: "Étudiants formés", value: "500+" },
-  { icon: BookOpen, label: "Formations", value: "10+" },
-  { icon: Award, label: "Certifications", value: "100%" },
+  { icon: BookOpen, label: "Formations", value: "50+" },
+  { icon: Award, label: "Brevets délivrés", value: "100%" },
   { icon: Target, label: "Taux d'insertion", value: "85%" },
 ];
 
@@ -18,10 +18,13 @@ const AboutSection = () => (
             Un centre d'excellence pour votre formation professionnelle
           </h2>
           <p className="text-muted-foreground leading-relaxed mb-4">
-            Le <strong className="text-foreground">Centre de Formation Professionnelle Mamre Training Center (MTC)</strong> est un établissement de formation dédié à l'acquisition de compétences pratiques et professionnelles. Situé au cœur de Lubumbashi, MTC offre des formations de qualité adaptées aux besoins du marché de l'emploi.
+            Le <strong className="text-foreground">Centre de Formation Professionnelle Mamre Training Center (MTC)</strong> est un établissement agréé dédié à l'acquisition de compétences pratiques et professionnelles. Situé au cœur de Lubumbashi avec des antennes à Kolwezi et Likasi, MTC offre plus de 50 formations certifiantes adaptées aux besoins du marché.
+          </p>
+          <p className="text-muted-foreground leading-relaxed mb-4">
+            Nos formations couvrent 9 domaines d'expertise : informatique et multimédia, mode et beauté, hôtellerie, métiers techniques, management, entrepreneuriat, langues, sécurité au travail, et conduite d'engins lourds.
           </p>
           <p className="text-muted-foreground leading-relaxed">
-            Notre mission est de former des professionnels compétents, capables de répondre aux exigences du monde du travail en République Démocratique du Congo et au-delà.
+            Chaque parcours combine formation théorique, pratique encadrée, stage professionnel et délivrance d'un brevet reconnu.
           </p>
         </div>
         <div className="flex justify-center">
