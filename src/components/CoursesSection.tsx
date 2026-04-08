@@ -163,6 +163,14 @@ const CoursesSection = () => {
   const total = categories.reduce((sum, c) => sum + c.formations.length, 0);
   const activeCat = categories[activeCategory];
 
+  // Preload all category images on mount
+  useEffect(() => {
+    categories.forEach((cat) => {
+      const img = new Image();
+      img.src = cat.image;
+    });
+  }, []);
+
   return (
     <section id="formations" className="section-padding bg-background">
       <div className="container mx-auto">
