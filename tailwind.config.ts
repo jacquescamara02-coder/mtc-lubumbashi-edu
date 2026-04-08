@@ -13,7 +13,16 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ["Open Sans", "sans-serif"],
+        heading: ["Montserrat", "sans-serif"],
+      },
       colors: {
+        "section-light": "hsl(var(--section-light))",
+        red: {
+          DEFAULT: "hsl(var(--red))",
+          foreground: "hsl(var(--red-foreground))",
+        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
