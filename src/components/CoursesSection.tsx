@@ -200,8 +200,7 @@ const CoursesSection = () => {
           <img
             src={activeCat.image}
             alt={activeCat.name}
-            loading="lazy"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover transition-opacity duration-300"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
           <div className="absolute bottom-0 left-0 right-0 p-6 flex items-end gap-4">
