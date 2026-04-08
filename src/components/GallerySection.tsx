@@ -4,8 +4,6 @@ import gallery1 from "@/assets/gallery-1.jpg";
 import gallery2 from "@/assets/gallery-2.jpg";
 import gallery3 from "@/assets/gallery-3.jpg";
 import gallery4 from "@/assets/gallery-4.jpg";
-import gallery5 from "@/assets/gallery-5.jpg";
-import gallery6 from "@/assets/gallery-6.jpg";
 import gallery7 from "@/assets/gallery-7.jpg";
 import gallery8 from "@/assets/gallery-8.jpg";
 
@@ -16,8 +14,6 @@ const photos = [
   { src: gallery7, alt: "Formation en coiffure et esthétique", span: "row-span-2" },
   { src: gallery8, alt: "Photo de groupe étudiants et formateurs", span: "col-span-2" },
   { src: gallery4, alt: "Atelier pratique au centre", span: "" },
-  { src: gallery5, alt: "Salle de formation", span: "col-span-2" },
-  { src: gallery6, alt: "Atelier de plomberie", span: "" },
 ];
 
 const GallerySection = () => {
