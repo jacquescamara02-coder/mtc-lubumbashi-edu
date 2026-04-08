@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   Monitor, Scissors, Palette, ChefHat, Flame, Wrench, Languages,
   Plane, Building2, ShieldCheck, FileText, Truck, Car, Cpu,
@@ -162,6 +162,14 @@ const CoursesSection = () => {
   const [activeCategory, setActiveCategory] = useState(0);
   const total = categories.reduce((sum, c) => sum + c.formations.length, 0);
   const activeCat = categories[activeCategory];
+
+  // Preload all category images on mount
+  useEffect(() => {
+    categories.forEach((cat) => {
+      const img = new Image();
+      img.src = cat.image;
+    });
+  }, []);
 
   return (
     <section id="formations" className="section-padding bg-background">
