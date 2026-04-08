@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   Monitor, Scissors, Palette, ChefHat, Flame, Wrench, Languages,
   Plane, Building2, ShieldCheck, FileText, Truck, Car, Cpu,
