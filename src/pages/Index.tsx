@@ -9,18 +9,33 @@ import FAQSection from "@/components/FAQSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import AnimatedSection from "@/components/AnimatedSection";
 
 const Index = () => (
   <>
     <Navbar />
     <HeroSection />
-    <AboutSection />
-    <CoursesSection />
-    <TestimonialsSection />
-    <GallerySection />
-    <SitesSection />
-    <FAQSection />
-    <ContactSection />
+    <AnimatedSection>
+      <AboutSection />
+    </AnimatedSection>
+    <AnimatedSection animation="fade-in-up" delay="100ms">
+      <CoursesSection />
+    </AnimatedSection>
+    <AnimatedSection animation="scale-in">
+      <TestimonialsSection />
+    </AnimatedSection>
+    <AnimatedSection animation="fade-in-up">
+      <GallerySection />
+    </AnimatedSection>
+    <AnimatedSection animation="fade-in-left">
+      <SitesSection />
+    </AnimatedSection>
+    <AnimatedSection animation="fade-in-right">
+      <FAQSection />
+    </AnimatedSection>
+    <AnimatedSection animation="fade-in-up">
+      <ContactSection />
+    </AnimatedSection>
     <Footer />
     <WhatsAppButton />
   </>
