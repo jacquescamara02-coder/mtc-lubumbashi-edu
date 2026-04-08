@@ -1,4 +1,28 @@
-import { Phone, MapPin, MessageCircle, Mail } from "lucide-react";
+import { Phone, MapPin, MessageCircle, FileText } from "lucide-react";
+
+const formationOptions = [
+  "Informatique & Multimédia",
+  "Coupe et Couture",
+  "Mode et Stylisme",
+  "Esthétique et Coiffure",
+  "Cuisine et Restauration",
+  "Pâtisserie et Boulangerie",
+  "Électricité Industrielle",
+  "Électricité de Bâtiment",
+  "Plomberie",
+  "Soudure et Ajustage",
+  "Menuiserie",
+  "Management & Gestion",
+  "Entrepreneuriat & Commerce",
+  "Anglais",
+  "Français",
+  "Hôtesse de l'Air",
+  "Hôtesse d'Accueil",
+  "Hygiène et Sécurité au Travail",
+  "Douane et Fiscalité",
+  "Logistique",
+  "Auto-École & Engins Lourds",
+];
 
 const ContactSection = () => (
   <section id="contact" className="section-padding bg-background">
@@ -8,7 +32,7 @@ const ContactSection = () => (
         <h2 className="font-heading font-bold text-3xl md:text-4xl text-foreground">Restons en Contact</h2>
       </div>
 
-      <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
+      <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8">
         <div className="space-y-6">
           <div className="flex items-start gap-4">
             <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
@@ -16,8 +40,8 @@ const ContactSection = () => (
             </div>
             <div>
               <h4 className="font-heading font-semibold text-foreground">Adresse</h4>
-              <p className="text-sm text-muted-foreground">Centre ville de Lubumbashi, Avenue Lomami coin des Usines, 1er niveau</p>
-              <p className="text-sm text-muted-foreground">Quartier Makutano, Commune de Lubumbashi, Haut-Katanga</p>
+              <p className="text-sm text-muted-foreground">Q. Makomeno, Av. Lomami coin des Usines, N°04</p>
+              <p className="text-sm text-muted-foreground">Commune de Lubumbashi, Haut-Katanga, RDC</p>
             </div>
           </div>
           <div className="flex items-start gap-4">
@@ -26,7 +50,8 @@ const ContactSection = () => (
             </div>
             <div>
               <h4 className="font-heading font-semibold text-foreground">Téléphone</h4>
-              <a href="tel:+243816029419" className="text-sm text-primary hover:underline">+243 816 029 419</a>
+              <a href="tel:+243816029419" className="text-sm text-primary hover:underline block">+243 816 029 419</a>
+              <a href="tel:+243993132628" className="text-sm text-primary hover:underline block">+243 993 132 628</a>
             </div>
           </div>
           <div className="flex items-start gap-4">
@@ -40,6 +65,17 @@ const ContactSection = () => (
               </a>
             </div>
           </div>
+          <div className="flex items-start gap-4">
+            <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+              <FileText className="h-5 w-5 text-primary" />
+            </div>
+            <div>
+              <h4 className="font-heading font-semibold text-foreground">Informations légales</h4>
+              <p className="text-xs text-muted-foreground">RCCM : CD/L'SHI/24-B-01324</p>
+              <p className="text-xs text-muted-foreground">ID NAT : 05-P8501-N55251L</p>
+              <p className="text-xs text-muted-foreground">N° Impôt : A2425544S</p>
+            </div>
+          </div>
         </div>
 
         <div className="bg-section-light rounded-xl p-8 border">
@@ -49,14 +85,9 @@ const ContactSection = () => (
             <input type="tel" placeholder="Votre numéro de téléphone" className="w-full px-4 py-3 rounded-md border bg-background text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary" />
             <select className="w-full px-4 py-3 rounded-md border bg-background text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary">
               <option value="">Choisir une formation</option>
-              <option>Informatique & Bureautique</option>
-              <option>Langues</option>
-              <option>Électricité & Plomberie</option>
-              <option>Gestion & Entrepreneuriat</option>
-              <option>Électronique</option>
-              <option>Coupe & Couture</option>
-              <option>Comptabilité</option>
-              <option>Logistique</option>
+              {formationOptions.map((f) => (
+                <option key={f}>{f}</option>
+              ))}
             </select>
             <textarea placeholder="Votre message" rows={3} className="w-full px-4 py-3 rounded-md border bg-background text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary resize-none" />
             <button type="submit" className="w-full bg-red text-red-foreground font-heading font-bold py-3 rounded-md hover:opacity-90 transition-opacity">
