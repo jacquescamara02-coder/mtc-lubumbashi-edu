@@ -2,7 +2,7 @@ import { Award, Users, BookOpen, Target } from "lucide-react";
 import logo from "@/assets/logo-mtc.jpg";
 
 const stats = [
-  { icon: Users, label: "Étudiants formés", value: "500+" },
+  { icon: Users, label: "Étudiants formés", value: "1000+" },
   { icon: BookOpen, label: "Formations", value: "50+" },
   { icon: Award, label: "Brevets délivrés", value: "100%" },
   { icon: Target, label: "Taux d'insertion", value: "85%" },
