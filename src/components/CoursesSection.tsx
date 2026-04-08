@@ -165,10 +165,20 @@ const CoursesSection = () => {
 
   // Preload all category images on mount
   useEffect(() => {
-    categories.forEach((cat) => {
+    const preloadPromises = categories.map((cat) => {
       const img = new Image();
       img.src = cat.image;
+      img.loading = "eager";
+      img.decoding = "sync";
+
+      if (typeof img.decode === "function") {
+        return img.decode().catch(() => undefined);
+      }
+
+      return Promise.resolve();
     });
+
+    void Promise.allSettled(preloadPromises);
   }, []);
 
   return (
@@ -204,12 +214,20 @@ const CoursesSection = () => {
         </div>
 
         {/* Category Image + Header */}
-        <div className="mb-8 rounded-2xl overflow-hidden relative h-48 md:h-64">
-          <img
-            src={activeCat.image}
-            alt={activeCat.name}
-            className="w-full h-full object-cover transition-opacity duration-300"
-          />
+        <div className="mb-8 rounded-2xl overflow-hidden relative h-48 md:h-64 bg-muted">
+          {categories.map((cat, i) => (
+            <img
+              key={cat.name}
+              src={cat.image}
+              alt={cat.name}
+              loading="eager"
+              decoding="sync"
+              aria-hidden={activeCategory !== i}
+              className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-200 ${
+                activeCategory === i ? "opacity-100" : "pointer-events-none opacity-0"
+              }`}
+            />
+          ))}
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
           <div className="absolute bottom-0 left-0 right-0 p-6 flex items-end gap-4">
             <div className={`h-12 w-12 rounded-xl ${activeCat.color} flex items-center justify-center shrink-0`}>
