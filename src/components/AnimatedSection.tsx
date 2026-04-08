@@ -1,12 +1,21 @@
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { cn } from "@/lib/utils";
 
+type Animation = "fade-in-up" | "fade-in-left" | "fade-in-right" | "scale-in";
+
 interface AnimatedSectionProps {
   children: React.ReactNode;
-  animation?: "fade-in-up" | "fade-in-left" | "fade-in-right" | "scale-in";
+  animation?: Animation;
   delay?: string;
   className?: string;
 }
+
+const animationClass: Record<Animation, string> = {
+  "fade-in-up": "animate-fade-in-up",
+  "fade-in-left": "animate-fade-in-left",
+  "fade-in-right": "animate-fade-in-right",
+  "scale-in": "animate-scale-in",
+};
 
 const AnimatedSection = ({
   children,
@@ -21,7 +30,7 @@ const AnimatedSection = ({
       ref={ref}
       className={cn(
         "opacity-0",
-        isVisible && `animate-${animation}`,
+        isVisible && animationClass[animation],
         className
       )}
       style={{ animationDelay: delay }}
