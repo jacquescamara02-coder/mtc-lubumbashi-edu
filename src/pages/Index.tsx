@@ -39,6 +39,7 @@ const Index = () => (
     </AnimatedSection>
     <Footer />
     <WhatsAppButton />
+    <ScrollToTop />
   </>
 );
 
