@@ -6,6 +6,16 @@ import {
   TreePine, BarChart3, Users, BookOpen, GraduationCap
 } from "lucide-react";
 
+import catInformatique from "@/assets/cat-informatique.jpg";
+import catMode from "@/assets/cat-mode.jpg";
+import catHotellerie from "@/assets/cat-hotellerie.jpg";
+import catTechnique from "@/assets/cat-technique.jpg";
+import catManagement from "@/assets/cat-management.jpg";
+import catEntrepreneuriat from "@/assets/cat-entrepreneuriat.jpg";
+import catLangues from "@/assets/cat-langues.jpg";
+import catSecurite from "@/assets/cat-securite.jpg";
+import catAutoecole from "@/assets/cat-autoecole.jpg";
+
 interface Formation {
   title: string;
   details: string;
@@ -17,6 +27,7 @@ interface Category {
   name: string;
   icon: React.ElementType;
   color: string;
+  image: string;
   formations: Formation[];
 }
 
@@ -25,6 +36,7 @@ const categories: Category[] = [
     name: "Informatique & Multimédia",
     icon: Monitor,
     color: "bg-primary",
+    image: catInformatique,
     formations: [
       { title: "Informatique Générale", details: "Formation complète en informatique avec brevet", duration: "3 mois", icon: Monitor },
       { title: "Bureautique", details: "Word, Excel, PowerPoint et outils de bureau avec brevet", duration: "2 mois", icon: Cpu },
@@ -39,6 +51,7 @@ const categories: Category[] = [
     name: "Mode & Beauté",
     icon: Scissors,
     color: "bg-red",
+    image: catMode,
     formations: [
       { title: "Coupe et Couture", details: "Formation complète avec matériel et brevet", duration: "6 mois", icon: Scissors },
       { title: "Mode et Stylisme", details: "Création de mode, design et brevet", duration: "6 mois", icon: Palette },
@@ -49,6 +62,7 @@ const categories: Category[] = [
     name: "Hôtellerie & Restauration",
     icon: ChefHat,
     color: "bg-primary",
+    image: catHotellerie,
     formations: [
       { title: "Cuisine et Restauration", details: "Formation théorique et pratique, stage et brevet", duration: "4 mois", icon: ChefHat },
       { title: "Pâtisserie et Boulangerie", details: "Formation théorique et pratique, stage et brevet", duration: "3 mois", icon: CakeSlice },
@@ -60,6 +74,7 @@ const categories: Category[] = [
     name: "Métiers Techniques",
     icon: Wrench,
     color: "bg-red",
+    image: catTechnique,
     formations: [
       { title: "Électricité Industrielle", details: "Formation spécialisée en électricité industrielle avec brevet", duration: "4 mois", icon: Factory },
       { title: "Électricité de Bâtiment", details: "Installation électrique résidentielle et brevet", duration: "4 mois", icon: Building2 },
@@ -73,6 +88,7 @@ const categories: Category[] = [
     name: "Management & Gestion",
     icon: Briefcase,
     color: "bg-primary",
+    image: catManagement,
     formations: [
       { title: "Management des Finances", details: "Formation théorique, stage et brevet", duration: "4 mois", icon: BarChart3 },
       { title: "Management des Projets", details: "Formation théorique, stage et brevet", duration: "4 mois", icon: Briefcase },
@@ -87,6 +103,7 @@ const categories: Category[] = [
     name: "Entrepreneuriat & Commerce",
     icon: GraduationCap,
     color: "bg-red",
+    image: catEntrepreneuriat,
     formations: [
       { title: "Gestion des Entreprises", details: "Formation théorique, stage et brevet", duration: "4 mois", icon: Building2 },
       { title: "Gestion de Projet", details: "Formation théorique, stage et brevet", duration: "4 mois", icon: Briefcase },
@@ -102,6 +119,7 @@ const categories: Category[] = [
     name: "Langues & Communication",
     icon: Languages,
     color: "bg-primary",
+    image: catLangues,
     formations: [
       { title: "Anglais", details: "Anglais professionnel pour le monde du travail", duration: "6 mois", icon: Languages },
       { title: "Français", details: "Perfectionnement en langue française", duration: "6 mois", icon: Languages },
@@ -111,6 +129,7 @@ const categories: Category[] = [
     name: "Sécurité & Réglementation",
     icon: ShieldCheck,
     color: "bg-red",
+    image: catSecurite,
     formations: [
       { title: "Hygiène et Sécurité au Travail", details: "Safety First — Formation certifiante en HSE", duration: "2 mois", icon: ShieldCheck },
       { title: "Douane et Fiscalité", details: "Formation théorique, stage et brevet", duration: "3 mois", icon: FileText },
@@ -122,6 +141,7 @@ const categories: Category[] = [
     name: "Auto-École & Engins Lourds",
     icon: Car,
     color: "bg-primary",
+    image: catAutoecole,
     formations: [
       { title: "Petit Véhicule", details: "Formation théorique et pratique, permis de conduire et brevet", duration: "45 jours", icon: Car },
       { title: "Camion Benne Articulé", details: "Formation complète, permis de conduire et brevet", duration: "45 jours", icon: Truck },
@@ -141,11 +161,11 @@ const categories: Category[] = [
 const CoursesSection = () => {
   const [activeCategory, setActiveCategory] = useState(0);
   const total = categories.reduce((sum, c) => sum + c.formations.length, 0);
+  const activeCat = categories[activeCategory];
 
   return (
     <section id="formations" className="section-padding bg-background">
       <div className="container mx-auto">
-        {/* Header */}
         <div className="text-center mb-12">
           <p className="text-sm font-semibold uppercase tracking-widest text-red mb-2">Nos programmes</p>
           <h2 className="font-heading font-bold text-3xl md:text-4xl text-foreground">
@@ -175,47 +195,48 @@ const CoursesSection = () => {
           ))}
         </div>
 
-        {/* Active Category Content */}
-        <div className="mb-4">
-          <div className="flex items-center gap-3 mb-6">
-            {(() => {
-              const Cat = categories[activeCategory];
-              return (
-                <>
-                  <div className={`h-10 w-10 rounded-lg ${Cat.color} flex items-center justify-center`}>
-                    <Cat.icon className="h-5 w-5 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="font-heading font-bold text-xl text-foreground">{Cat.name}</h3>
-                    <p className="text-sm text-muted-foreground">{Cat.formations.length} formation{Cat.formations.length > 1 ? "s" : ""} disponible{Cat.formations.length > 1 ? "s" : ""}</p>
-                  </div>
-                </>
-              );
-            })()}
+        {/* Category Image + Header */}
+        <div className="mb-8 rounded-2xl overflow-hidden relative h-48 md:h-64">
+          <img
+            src={activeCat.image}
+            alt={activeCat.name}
+            loading="lazy"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+          <div className="absolute bottom-0 left-0 right-0 p-6 flex items-end gap-4">
+            <div className={`h-12 w-12 rounded-xl ${activeCat.color} flex items-center justify-center shrink-0`}>
+              <activeCat.icon className="h-6 w-6 text-white" />
+            </div>
+            <div>
+              <h3 className="font-heading font-bold text-xl md:text-2xl text-white">{activeCat.name}</h3>
+              <p className="text-sm text-white/80">{activeCat.formations.length} formation{activeCat.formations.length > 1 ? "s" : ""} disponible{activeCat.formations.length > 1 ? "s" : ""}</p>
+            </div>
           </div>
+        </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-            {categories[activeCategory].formations.map((f) => (
-              <div
-                key={f.title}
-                className="group bg-background border rounded-xl p-5 hover:shadow-lg hover:border-primary/40 transition-all duration-300"
-              >
-                <div className="flex items-start gap-3">
-                  <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary transition-colors">
-                    <f.icon className="h-5 w-5 text-primary group-hover:text-primary-foreground transition-colors" />
-                  </div>
-                  <div className="min-w-0">
-                    <h4 className="font-heading font-bold text-sm text-foreground leading-tight mb-1">{f.title}</h4>
-                    <p className="text-xs text-muted-foreground mb-2">{f.details}</p>
-                    <span className="inline-flex items-center gap-1 text-xs font-semibold text-primary bg-primary/10 px-2 py-0.5 rounded-full">
-                      <BookOpen className="h-3 w-3" />
-                      {f.duration}
-                    </span>
-                  </div>
+        {/* Formations Grid */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mb-4">
+          {activeCat.formations.map((f) => (
+            <div
+              key={f.title}
+              className="group bg-background border rounded-xl p-5 hover:shadow-lg hover:border-primary/40 transition-all duration-300"
+            >
+              <div className="flex items-start gap-3">
+                <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary transition-colors">
+                  <f.icon className="h-5 w-5 text-primary group-hover:text-primary-foreground transition-colors" />
+                </div>
+                <div className="min-w-0">
+                  <h4 className="font-heading font-bold text-sm text-foreground leading-tight mb-1">{f.title}</h4>
+                  <p className="text-xs text-muted-foreground mb-2">{f.details}</p>
+                  <span className="inline-flex items-center gap-1 text-xs font-semibold text-primary bg-primary/10 px-2 py-0.5 rounded-full">
+                    <BookOpen className="h-3 w-3" />
+                    {f.duration}
+                  </span>
                 </div>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
 
         {/* CTA */}
