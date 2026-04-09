@@ -1,3 +1,4 @@
+import { Facebook } from "lucide-react";
 import logo from "@/assets/logo-mtc.jpg";
 
 const Footer = () => (
@@ -35,6 +36,17 @@ const Footer = () => (
             <li>+243 816 029 419</li>
             <li>+243 993 132 628</li>
           </ul>
+          <div className="mt-4 flex items-center gap-3">
+            <a
+              href="https://www.facebook.com/share/p/1EVc8mDhaw/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-primary-foreground/10 hover:bg-primary-foreground/20 text-primary-foreground px-4 py-2 rounded-lg transition-colors text-sm font-semibold"
+            >
+              <Facebook className="h-5 w-5" />
+              Suivez-nous
+            </a>
+          </div>
         </div>
       </div>
       <div className="border-t border-primary-foreground/20 pt-6 text-center text-sm text-primary-foreground/50">
