@@ -46,6 +46,7 @@ import galleryCeremonie30 from "@/assets/gallery-ceremonie30.jpg";
 import galleryCeremonie31 from "@/assets/gallery-ceremonie31.jpg";
 import galleryCeremonie32 from "@/assets/gallery-ceremonie32.jpg";
 import galleryCeremonie33 from "@/assets/gallery-ceremonie33.jpg";
+import galleryCeremonie34 from "@/assets/gallery-ceremonie34.jpg";
 import galleryCentre1 from "@/assets/gallery-centre1.jpg";
 import galleryCentre2 from "@/assets/gallery-centre2.jpg";
 import galleryCentre3 from "@/assets/gallery-centre3.jpg";
@@ -103,6 +104,7 @@ const photos: { src: string; alt: string; category: Category; span?: string }[] 
   { src: galleryCeremonie31, alt: "Diplômée avec certificat – toge noire MTC", category: "ceremonie" },
   { src: galleryCeremonie32, alt: "Diplômée souriante – certificat MTC Esthétique", category: "ceremonie" },
   { src: galleryCeremonie33, alt: "Lauréate avec trophée – cérémonie MTC", category: "ceremonie" },
+  { src: galleryCeremonie34, alt: "Présentatrice – discours cérémonie MTC", category: "ceremonie" },
   // Maquillage
   { src: galleryMakeup1, alt: "Atelier maquillage – pratique entre étudiantes", category: "maquillage" },
   { src: galleryMakeup2, alt: "Résultat maquillage professionnel", category: "maquillage" },
