@@ -93,6 +93,11 @@ const photos: { src: string; alt: string; category: Category; span?: string }[] 
   { src: galleryCeremonie24, alt: "Diplômée avec roses – toge noire MTC", category: "ceremonie" },
   { src: galleryCeremonie25, alt: "Diplômée en toge bleue – certificat et roses", category: "ceremonie" },
   { src: galleryCeremonie26, alt: "Diplômée en blazer rouge – toge bleue MTC", category: "ceremonie" },
+  { src: galleryCeremonie27, alt: "Portrait diplômée – robe bleue et écharpe MTC", category: "ceremonie" },
+  { src: galleryCeremonie28, alt: "Diplômée en tailleur rose – MTC Esthétique", category: "ceremonie" },
+  { src: galleryCeremonie29, alt: "Portrait artistique – diplômée MTC Esthétique", category: "ceremonie" },
+  { src: galleryCeremonie30, alt: "Lauréate souriante – écharpe Mamre Training Center", category: "ceremonie" },
+  { src: galleryCeremonie31, alt: "Diplômée avec certificat – toge noire MTC", category: "ceremonie" },
   // Maquillage
   { src: galleryMakeup1, alt: "Atelier maquillage – pratique entre étudiantes", category: "maquillage" },
   { src: galleryMakeup2, alt: "Résultat maquillage professionnel", category: "maquillage" },
