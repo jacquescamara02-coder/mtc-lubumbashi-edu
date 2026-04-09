@@ -46,6 +46,7 @@ import galleryCeremonie30 from "@/assets/gallery-ceremonie30.jpg";
 import galleryCeremonie31 from "@/assets/gallery-ceremonie31.jpg";
 import galleryCeremonie32 from "@/assets/gallery-ceremonie32.jpg";
 import galleryCeremonie33 from "@/assets/gallery-ceremonie33.jpg";
+import galleryCeremonie34 from "@/assets/gallery-ceremonie34.jpg";
 import galleryCentre1 from "@/assets/gallery-centre1.jpg";
 import galleryCentre2 from "@/assets/gallery-centre2.jpg";
 import galleryCentre3 from "@/assets/gallery-centre3.jpg";
