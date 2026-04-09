@@ -23,6 +23,16 @@ import galleryCeremonie7 from "@/assets/gallery-ceremonie7.jpg";
 import galleryCeremonie8 from "@/assets/gallery-ceremonie8.jpg";
 import galleryCeremonie9 from "@/assets/gallery-ceremonie9.jpg";
 import galleryCeremonie10 from "@/assets/gallery-ceremonie10.jpg";
+import galleryCeremonie11 from "@/assets/gallery-ceremonie11.jpg";
+import galleryCeremonie12 from "@/assets/gallery-ceremonie12.jpg";
+import galleryCeremonie13 from "@/assets/gallery-ceremonie13.jpg";
+import galleryCeremonie14 from "@/assets/gallery-ceremonie14.jpg";
+import galleryCeremonie15 from "@/assets/gallery-ceremonie15.jpg";
+import galleryCeremonie16 from "@/assets/gallery-ceremonie16.jpg";
+import galleryCeremonie17 from "@/assets/gallery-ceremonie17.jpg";
+import galleryCeremonie18 from "@/assets/gallery-ceremonie18.jpg";
+import galleryCeremonie19 from "@/assets/gallery-ceremonie19.jpg";
+import galleryCeremonie20 from "@/assets/gallery-ceremonie20.jpg";
 import galleryCentre1 from "@/assets/gallery-centre1.jpg";
 import galleryCentre2 from "@/assets/gallery-centre2.jpg";
 import gallery1 from "@/assets/gallery-1.jpg";
@@ -54,6 +64,16 @@ const photos: { src: string; alt: string; category: Category; span?: string }[] 
   { src: galleryCeremonie8, alt: "Diplômés en formation technique – toges bleues", category: "ceremonie" },
   { src: galleryCeremonie9, alt: "Lauréates avec diplômes et bouquets de fleurs", category: "ceremonie", span: "col-span-2" },
   { src: galleryCeremonie10, alt: "Photo de groupe – cérémonie de remise des brevets MTC", category: "ceremonie", span: "col-span-2" },
+  { src: galleryCeremonie11, alt: "Étudiantes en hôtellerie – présentation culinaire", category: "ceremonie" },
+  { src: galleryCeremonie12, alt: "Défilé de mode – robe de mariée et cérémonie MTC", category: "ceremonie", span: "col-span-2" },
+  { src: galleryCeremonie13, alt: "Discours d'une lauréate – cérémonie MTC", category: "ceremonie" },
+  { src: galleryCeremonie14, alt: "Lauréate en tenue de soirée – cérémonie MTC", category: "ceremonie" },
+  { src: galleryCeremonie15, alt: "Remise de brevets – cérémonie officielle", category: "ceremonie" },
+  { src: galleryCeremonie16, alt: "Cérémonie de fin de formation MTC", category: "ceremonie" },
+  { src: galleryCeremonie17, alt: "Lauréates – promotion MTC en tenue", category: "ceremonie", span: "col-span-2" },
+  { src: galleryCeremonie18, alt: "Remise des diplômes – ambiance festive", category: "ceremonie" },
+  { src: galleryCeremonie19, alt: "Photo officielle – cérémonie de graduation", category: "ceremonie" },
+  { src: galleryCeremonie20, alt: "Moment de célébration – brevets et bouquets", category: "ceremonie" },
   // Maquillage
   { src: galleryMakeup1, alt: "Atelier maquillage – pratique entre étudiantes", category: "maquillage" },
   { src: galleryMakeup2, alt: "Résultat maquillage professionnel", category: "maquillage" },
