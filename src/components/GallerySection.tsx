@@ -101,6 +101,8 @@ const photos: { src: string; alt: string; category: Category; span?: string }[] 
   { src: galleryCeremonie29, alt: "Portrait artistique – diplômée MTC Esthétique", category: "ceremonie" },
   { src: galleryCeremonie30, alt: "Lauréate souriante – écharpe Mamre Training Center", category: "ceremonie" },
   { src: galleryCeremonie31, alt: "Diplômée avec certificat – toge noire MTC", category: "ceremonie" },
+  { src: galleryCeremonie32, alt: "Diplômée souriante – certificat MTC Esthétique", category: "ceremonie" },
+  { src: galleryCeremonie33, alt: "Lauréate avec trophée – cérémonie MTC", category: "ceremonie" },
   // Maquillage
   { src: galleryMakeup1, alt: "Atelier maquillage – pratique entre étudiantes", category: "maquillage" },
   { src: galleryMakeup2, alt: "Résultat maquillage professionnel", category: "maquillage" },
@@ -122,6 +124,7 @@ const photos: { src: string; alt: string; category: Category; span?: string }[] 
   { src: galleryCentre2, alt: "Formateur MTC – métiers techniques", category: "centre" },
   { src: galleryCentre3, alt: "Affiche promotionnelle MTC Center", category: "centre", span: "col-span-2" },
   { src: galleryCentre4, alt: "Étudiantes en uniforme bleu – formation MTC", category: "centre" },
+  { src: galleryCentre5, alt: "Affiche formation Coupe & Couture MTC", category: "centre", span: "col-span-2" },
   { src: gallery2, alt: "Bâtiment du centre MTC", category: "centre" },
   { src: gallery3, alt: "Atelier de soudure", category: "centre" },
   { src: gallery4, alt: "Atelier pratique au centre", category: "centre" },
