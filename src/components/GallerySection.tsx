@@ -52,10 +52,6 @@ import galleryCentre2 from "@/assets/gallery-centre2.jpg";
 import galleryCentre3 from "@/assets/gallery-centre3.jpg";
 import galleryCentre4 from "@/assets/gallery-centre4.jpg";
 import galleryCentre5 from "@/assets/gallery-centre5.jpg";
-import gallery1 from "@/assets/gallery-1.jpg";
-import gallery2 from "@/assets/gallery-2.jpg";
-import gallery3 from "@/assets/gallery-3.jpg";
-import gallery4 from "@/assets/gallery-4.jpg";
 
 type Category = "all" | "ceremonie" | "coiffure" | "maquillage" | "autoecole" | "centre";
 
@@ -71,7 +67,7 @@ const categories: { key: Category; label: string }[] = [
 const photos: { src: string; alt: string; category: Category; span?: string }[] = [
   // Cérémonies
   { src: galleryCeremony, alt: "Cérémonie de remise des diplômes – photo de groupe", category: "ceremonie", span: "col-span-2" },
-  { src: gallery1, alt: "Cérémonie de remise des brevets", category: "ceremonie" },
+  
   { src: galleryCeremonie3, alt: "Diplômées en esthétique – toges noires", category: "ceremonie" },
   { src: galleryCeremonie6, alt: "Diplômées en esthétique – promotion MTC", category: "ceremonie", span: "col-span-2" },
   { src: galleryCeremonie4, alt: "Diplômées en coupe & couture – toges bleues", category: "ceremonie" },
@@ -127,9 +123,6 @@ const photos: { src: string; alt: string; category: Category; span?: string }[] 
   { src: galleryCentre3, alt: "Affiche promotionnelle MTC Center", category: "centre", span: "col-span-2" },
   { src: galleryCentre4, alt: "Étudiantes en uniforme bleu – formation MTC", category: "centre" },
   { src: galleryCentre5, alt: "Affiche formation Coupe & Couture MTC", category: "centre", span: "col-span-2" },
-  { src: gallery2, alt: "Bâtiment du centre MTC", category: "centre" },
-  { src: gallery3, alt: "Atelier de soudure", category: "centre" },
-  { src: gallery4, alt: "Atelier pratique au centre", category: "centre" },
 ];
 
 const GallerySection = () => {
