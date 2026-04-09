@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Phone, MapPin, MessageCircle, FileText, Send, UserPlus, Mail } from "lucide-react";
 
 const formationOptions = [
@@ -32,6 +32,12 @@ const inputClass =
 
 const ContactSection = () => {
   const [tab, setTab] = useState<Tab>("info");
+
+  useEffect(() => {
+    const handler = () => setTab("inscription");
+    window.addEventListener("switch-to-inscription", handler);
+    return () => window.removeEventListener("switch-to-inscription", handler);
+  }, []);
 
   // Info form
   const [name, setName] = useState("");

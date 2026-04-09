@@ -280,7 +280,15 @@ const CoursesSection = () => {
               Nous contacter
             </a>
             <a
-              href="#contact"
+              href="#contact-inscription"
+              onClick={(e) => {
+                e.preventDefault();
+                const el = document.getElementById("contact");
+                if (el) {
+                  el.scrollIntoView({ behavior: "smooth" });
+                  window.dispatchEvent(new CustomEvent("switch-to-inscription"));
+                }
+              }}
               className="border border-primary text-primary font-heading font-bold px-6 py-3 rounded-lg hover:bg-primary hover:text-primary-foreground transition-colors text-sm"
             >
               Demander une inscription
