@@ -104,6 +104,7 @@ const photos: { src: string; alt: string; category: Category; span?: string }[] 
   { src: galleryCeremonie31, alt: "Diplômée avec certificat – toge noire MTC", category: "ceremonie" },
   { src: galleryCeremonie32, alt: "Diplômée souriante – certificat MTC Esthétique", category: "ceremonie" },
   { src: galleryCeremonie33, alt: "Lauréate avec trophée – cérémonie MTC", category: "ceremonie" },
+  { src: galleryCeremonie34, alt: "Présentatrice – discours cérémonie MTC", category: "ceremonie" },
   // Maquillage
   { src: galleryMakeup1, alt: "Atelier maquillage – pratique entre étudiantes", category: "maquillage" },
   { src: galleryMakeup2, alt: "Résultat maquillage professionnel", category: "maquillage" },
