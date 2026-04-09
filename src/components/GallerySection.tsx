@@ -39,6 +39,11 @@ import galleryCeremonie23 from "@/assets/gallery-ceremonie23.jpg";
 import galleryCeremonie24 from "@/assets/gallery-ceremonie24.jpg";
 import galleryCeremonie25 from "@/assets/gallery-ceremonie25.jpg";
 import galleryCeremonie26 from "@/assets/gallery-ceremonie26.jpg";
+import galleryCeremonie27 from "@/assets/gallery-ceremonie27.jpg";
+import galleryCeremonie28 from "@/assets/gallery-ceremonie28.jpg";
+import galleryCeremonie29 from "@/assets/gallery-ceremonie29.jpg";
+import galleryCeremonie30 from "@/assets/gallery-ceremonie30.jpg";
+import galleryCeremonie31 from "@/assets/gallery-ceremonie31.jpg";
 import galleryCentre1 from "@/assets/gallery-centre1.jpg";
 import galleryCentre2 from "@/assets/gallery-centre2.jpg";
 import galleryCentre3 from "@/assets/gallery-centre3.jpg";
@@ -88,6 +93,11 @@ const photos: { src: string; alt: string; category: Category; span?: string }[] 
   { src: galleryCeremonie24, alt: "Diplômée avec roses – toge noire MTC", category: "ceremonie" },
   { src: galleryCeremonie25, alt: "Diplômée en toge bleue – certificat et roses", category: "ceremonie" },
   { src: galleryCeremonie26, alt: "Diplômée en blazer rouge – toge bleue MTC", category: "ceremonie" },
+  { src: galleryCeremonie27, alt: "Portrait diplômée – robe bleue et écharpe MTC", category: "ceremonie" },
+  { src: galleryCeremonie28, alt: "Diplômée en tailleur rose – MTC Esthétique", category: "ceremonie" },
+  { src: galleryCeremonie29, alt: "Portrait artistique – diplômée MTC Esthétique", category: "ceremonie" },
+  { src: galleryCeremonie30, alt: "Lauréate souriante – écharpe Mamre Training Center", category: "ceremonie" },
+  { src: galleryCeremonie31, alt: "Diplômée avec certificat – toge noire MTC", category: "ceremonie" },
   // Maquillage
   { src: galleryMakeup1, alt: "Atelier maquillage – pratique entre étudiantes", category: "maquillage" },
   { src: galleryMakeup2, alt: "Résultat maquillage professionnel", category: "maquillage" },
