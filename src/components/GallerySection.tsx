@@ -33,8 +33,16 @@ import galleryCeremonie17 from "@/assets/gallery-ceremonie17.jpg";
 import galleryCeremonie18 from "@/assets/gallery-ceremonie18.jpg";
 import galleryCeremonie19 from "@/assets/gallery-ceremonie19.jpg";
 import galleryCeremonie20 from "@/assets/gallery-ceremonie20.jpg";
+import galleryCeremonie21 from "@/assets/gallery-ceremonie21.jpg";
+import galleryCeremonie22 from "@/assets/gallery-ceremonie22.jpg";
+import galleryCeremonie23 from "@/assets/gallery-ceremonie23.jpg";
+import galleryCeremonie24 from "@/assets/gallery-ceremonie24.jpg";
+import galleryCeremonie25 from "@/assets/gallery-ceremonie25.jpg";
+import galleryCeremonie26 from "@/assets/gallery-ceremonie26.jpg";
 import galleryCentre1 from "@/assets/gallery-centre1.jpg";
 import galleryCentre2 from "@/assets/gallery-centre2.jpg";
+import galleryCentre3 from "@/assets/gallery-centre3.jpg";
+import galleryCentre4 from "@/assets/gallery-centre4.jpg";
 import gallery1 from "@/assets/gallery-1.jpg";
 import gallery2 from "@/assets/gallery-2.jpg";
 import gallery3 from "@/assets/gallery-3.jpg";
@@ -74,6 +82,12 @@ const photos: { src: string; alt: string; category: Category; span?: string }[] 
   { src: galleryCeremonie18, alt: "Remise des diplômes – ambiance festive", category: "ceremonie" },
   { src: galleryCeremonie19, alt: "Photo officielle – cérémonie de graduation", category: "ceremonie" },
   { src: galleryCeremonie20, alt: "Moment de célébration – brevets et bouquets", category: "ceremonie" },
+  { src: galleryCeremonie21, alt: "Mariée – défilé de mode cérémonie MTC", category: "ceremonie" },
+  { src: galleryCeremonie22, alt: "Diplômée MTC Esthétique – certificat officiel", category: "ceremonie" },
+  { src: galleryCeremonie23, alt: "Diplômée MTC Esthétique – toge verte et écharpe", category: "ceremonie" },
+  { src: galleryCeremonie24, alt: "Diplômée avec roses – toge noire MTC", category: "ceremonie" },
+  { src: galleryCeremonie25, alt: "Diplômée en toge bleue – certificat et roses", category: "ceremonie" },
+  { src: galleryCeremonie26, alt: "Diplômée en blazer rouge – toge bleue MTC", category: "ceremonie" },
   // Maquillage
   { src: galleryMakeup1, alt: "Atelier maquillage – pratique entre étudiantes", category: "maquillage" },
   { src: galleryMakeup2, alt: "Résultat maquillage professionnel", category: "maquillage" },
@@ -93,6 +107,8 @@ const photos: { src: string; alt: string; category: Category; span?: string }[] 
   // Centre
   { src: galleryCentre1, alt: "Étudiante MTC – tenue de cérémonie", category: "centre" },
   { src: galleryCentre2, alt: "Formateur MTC – métiers techniques", category: "centre" },
+  { src: galleryCentre3, alt: "Affiche promotionnelle MTC Center", category: "centre", span: "col-span-2" },
+  { src: galleryCentre4, alt: "Étudiantes en uniforme bleu – formation MTC", category: "centre" },
   { src: gallery2, alt: "Bâtiment du centre MTC", category: "centre" },
   { src: gallery3, alt: "Atelier de soudure", category: "centre" },
   { src: gallery4, alt: "Atelier pratique au centre", category: "centre" },
