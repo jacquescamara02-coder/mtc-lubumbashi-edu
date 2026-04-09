@@ -82,6 +82,12 @@ const photos: { src: string; alt: string; category: Category; span?: string }[] 
   { src: galleryCeremonie18, alt: "Remise des diplômes – ambiance festive", category: "ceremonie" },
   { src: galleryCeremonie19, alt: "Photo officielle – cérémonie de graduation", category: "ceremonie" },
   { src: galleryCeremonie20, alt: "Moment de célébration – brevets et bouquets", category: "ceremonie" },
+  { src: galleryCeremonie21, alt: "Mariée – défilé de mode cérémonie MTC", category: "ceremonie" },
+  { src: galleryCeremonie22, alt: "Diplômée MTC Esthétique – certificat officiel", category: "ceremonie" },
+  { src: galleryCeremonie23, alt: "Diplômée MTC Esthétique – toge verte et écharpe", category: "ceremonie" },
+  { src: galleryCeremonie24, alt: "Diplômée avec roses – toge noire MTC", category: "ceremonie" },
+  { src: galleryCeremonie25, alt: "Diplômée en toge bleue – certificat et roses", category: "ceremonie" },
+  { src: galleryCeremonie26, alt: "Diplômée en blazer rouge – toge bleue MTC", category: "ceremonie" },
   // Maquillage
   { src: galleryMakeup1, alt: "Atelier maquillage – pratique entre étudiantes", category: "maquillage" },
   { src: galleryMakeup2, alt: "Résultat maquillage professionnel", category: "maquillage" },
@@ -101,6 +107,8 @@ const photos: { src: string; alt: string; category: Category; span?: string }[] 
   // Centre
   { src: galleryCentre1, alt: "Étudiante MTC – tenue de cérémonie", category: "centre" },
   { src: galleryCentre2, alt: "Formateur MTC – métiers techniques", category: "centre" },
+  { src: galleryCentre3, alt: "Affiche promotionnelle MTC Center", category: "centre", span: "col-span-2" },
+  { src: galleryCentre4, alt: "Étudiantes en uniforme bleu – formation MTC", category: "centre" },
   { src: gallery2, alt: "Bâtiment du centre MTC", category: "centre" },
   { src: gallery3, alt: "Atelier de soudure", category: "centre" },
   { src: gallery4, alt: "Atelier pratique au centre", category: "centre" },
