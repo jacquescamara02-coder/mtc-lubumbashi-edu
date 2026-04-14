@@ -3,7 +3,9 @@ import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
 import CoursesSection from "@/components/CoursesSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
+import VideoSection from "@/components/VideoSection";
 import GallerySection from "@/components/GallerySection";
+import PaymentSection from "@/components/PaymentSection";
 import SitesSection from "@/components/SitesSection";
 import FAQSection from "@/components/FAQSection";
 import ContactSection from "@/components/ContactSection";
@@ -26,6 +28,9 @@ const Index = () => (
       <TestimonialsSection />
     </AnimatedSection>
     <AnimatedSection animation="fade-in-up">
+      <VideoSection />
+    </AnimatedSection>
+    <AnimatedSection animation="fade-in-up">
       <GallerySection />
     </AnimatedSection>
     <AnimatedSection animation="fade-in-left">
@@ -33,6 +38,9 @@ const Index = () => (
     </AnimatedSection>
     <AnimatedSection animation="fade-in-right">
       <FAQSection />
+    </AnimatedSection>
+    <AnimatedSection animation="fade-in-up">
+      <PaymentSection />
     </AnimatedSection>
     <AnimatedSection animation="fade-in-up">
       <ContactSection />
