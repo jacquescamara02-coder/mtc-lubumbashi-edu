@@ -40,6 +40,9 @@ const Index = () => (
       <FAQSection />
     </AnimatedSection>
     <AnimatedSection animation="fade-in-up">
+      <PaymentSection />
+    </AnimatedSection>
+    <AnimatedSection animation="fade-in-up">
       <ContactSection />
     </AnimatedSection>
     <Footer />
