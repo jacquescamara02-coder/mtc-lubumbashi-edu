@@ -1,6 +1,18 @@
 import { Facebook } from "lucide-react";
 import logo from "@/assets/logo-mtc.jpg";
 
+const TikTokIcon = ({ className }: { className?: string }) => (
+  <svg
+    className={className}
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+  >
+    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43V8.87a8.16 8.16 0 0 0 4.77 1.52V6.94a4.85 4.85 0 0 1-1.84-.25z" />
+  </svg>
+);
+
 const Footer = () => (
   <footer className="bg-primary text-primary-foreground py-12">
     <div className="container mx-auto px-4">
@@ -45,6 +57,16 @@ const Footer = () => (
             >
               <Facebook className="h-5 w-5" />
               Suivez-nous
+            </a>
+            <a
+              href="https://www.tiktok.com/@mamretrainingcenter"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="TikTok"
+              className="inline-flex items-center gap-2 bg-primary-foreground/10 hover:bg-primary-foreground/20 text-primary-foreground px-4 py-2 rounded-lg transition-colors text-sm font-semibold"
+            >
+              <TikTokIcon className="h-5 w-5" />
+              TikTok
             </a>
           </div>
         </div>
