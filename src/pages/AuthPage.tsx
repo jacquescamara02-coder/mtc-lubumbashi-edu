@@ -31,8 +31,8 @@ const AuthPage = () => {
       if (error) {
         toast({ title: "Erreur", description: error.message, variant: "destructive" });
       } else {
-        toast({ title: "Inscription réussie", description: "Vérifiez votre email pour confirmer votre compte." });
-        setMode("login");
+        toast({ title: "Inscription réussie", description: "Bienvenue ! Accès administrateur activé." });
+        navigate("/admin");
       }
     } else {
       const { error } = await supabase.auth.signInWithPassword({ email, password });
