@@ -15,6 +15,7 @@ import AdminGallery from "./pages/admin/AdminGallery.tsx";
 import AdminTestimonials from "./pages/admin/AdminTestimonials.tsx";
 import AdminArticles from "./pages/admin/AdminArticles.tsx";
 import AdminTexts from "./pages/admin/AdminTexts.tsx";
+import AffichesPage from "./pages/AffichesPage.tsx";
 
 const queryClient = new QueryClient();
 
@@ -28,6 +29,7 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/auth" element={<AuthPage />} />
+            <Route path="/affiches" element={<AffichesPage />} />
             <Route
               path="/admin"
               element={
