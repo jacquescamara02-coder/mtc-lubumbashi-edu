@@ -66,6 +66,16 @@ import galleryCentre2 from "@/assets/gallery-centre2.jpg";
 import galleryCentre3 from "@/assets/gallery-centre3.jpg";
 import galleryCentre4 from "@/assets/gallery-centre4.jpg";
 import galleryCentre5 from "@/assets/gallery-centre5.jpg";
+import centreNew1 from "@/assets/centre-new-1.jpg";
+import centreNew2 from "@/assets/centre-new-2.jpg";
+import centreNew3 from "@/assets/centre-new-3.jpg";
+import centreNew4 from "@/assets/centre-new-4.jpg";
+import centreNew5 from "@/assets/centre-new-5.jpg";
+import centreNew6 from "@/assets/centre-new-6.jpg";
+import centreNew7 from "@/assets/centre-new-7.jpg";
+import centreNew8 from "@/assets/centre-new-8.jpg";
+import centreNew9 from "@/assets/centre-new-9.jpg";
+import centreNew10 from "@/assets/centre-new-10.jpg";
 
 type Category = "all" | "ceremonie" | "coiffure" | "maquillage" | "autoecole" | "centre";
 
@@ -151,6 +161,16 @@ const photos: { src: string; alt: string; category: Category; span?: string }[] 
   { src: galleryCentre3, alt: "Affiche promotionnelle MTC Center", category: "centre", span: "col-span-2" },
   { src: galleryCentre4, alt: "Étudiantes en uniforme bleu – formation MTC", category: "centre" },
   { src: galleryCentre5, alt: "Affiche formation Coupe & Couture MTC", category: "centre", span: "col-span-2" },
+  { src: centreNew1, alt: "Étudiants MTC en t-shirts au bord du lac – sortie détente", category: "centre", span: "col-span-2" },
+  { src: centreNew2, alt: "Étudiants MTC en sortie au bord du lac", category: "centre" },
+  { src: centreNew3, alt: "Promotion MTC – photo de groupe au bord du lac", category: "centre", span: "col-span-2" },
+  { src: centreNew4, alt: "Étudiantes MTC en t-shirts – sortie au lac", category: "centre" },
+  { src: centreNew5, alt: "Étudiantes MTC – portrait en t-shirt MTC", category: "centre" },
+  { src: centreNew6, alt: "Étudiants MTC en sortie – pose au bord du lac", category: "centre", span: "col-span-2" },
+  { src: centreNew7, alt: "Étudiantes MTC – ambiance détente au bord du lac", category: "centre" },
+  { src: centreNew8, alt: "Étudiante MTC – portrait élégant au bord du lac", category: "centre" },
+  { src: centreNew9, alt: "Étudiantes MTC – pose dynamique en t-shirt MTC", category: "centre" },
+  { src: centreNew10, alt: "Promotion MTC – photo de groupe en t-shirts MTC", category: "centre", span: "col-span-2" },
 ];
 
 const GallerySection = () => {
