@@ -15,6 +15,7 @@ import afficheSecretariat2025 from "@/assets/affiche-secretariat-2025.jpg";
 import afficheAutoEcoleNouveau from "@/assets/affiche-autoecole-nouveau.jpg";
 import afficheAnglaisNouveau from "@/assets/affiche-anglais-nouveau.jpg";
 import afficheCoutureNouveau from "@/assets/affiche-couture-nouveau.jpg";
+import afficheEnginsLourdsNouveau from "@/assets/affiche-engins-lourds-nouveau.jpg";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 
 type Affiche = {
@@ -45,6 +46,13 @@ const currentAffiches: Affiche[] = [
     title: "Nouvelle session Coupe et Couture",
     date: "Avril 2026",
     image: afficheCoutureNouveau,
+    description: "Inscriptions ouvertes",
+  },
+  {
+    id: "a4",
+    title: "Formation Engins Lourds",
+    date: "Avril 2026",
+    image: afficheEnginsLourdsNouveau,
     description: "Inscriptions ouvertes",
   },
 ];
