@@ -9,6 +9,7 @@ import afficheAnglais2025 from "@/assets/affiche-anglais-2025.jpg";
 import afficheEsthetique2025 from "@/assets/affiche-esthetique-2025.jpg";
 import afficheCuisine2025 from "@/assets/affiche-cuisine-2025.jpg";
 import afficheAutoEcole2025 from "@/assets/affiche-autoecole-2025.jpg";
+import afficheInformatique2024 from "@/assets/affiche-informatique-2024.jpg";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 
 type Affiche = {
@@ -88,6 +89,12 @@ const archiveAffiches: Affiche[] = [
     title: "Session 2025 - Auto-école",
     date: "Décembre 2024",
     image: afficheAutoEcole2025,
+  },
+  {
+    id: "ar5",
+    title: "Session 2024 - Informatique",
+    date: "Décembre 2024",
+    image: afficheInformatique2024,
   },
 ];
 
