@@ -53,6 +53,10 @@ import ceremonieNew3 from "@/assets/ceremonie-new-3.jpg";
 import ceremonieNew4 from "@/assets/ceremonie-new-4.jpg";
 import ceremonieNew5 from "@/assets/ceremonie-new-5.jpg";
 import ceremonieNew6 from "@/assets/ceremonie-new-6.jpg";
+import ceremonieNew7 from "@/assets/ceremonie-new-7.jpg";
+import ceremonieNew8 from "@/assets/ceremonie-new-8.jpg";
+import ceremonieNew9 from "@/assets/ceremonie-new-9.jpg";
+import ceremonieNew10 from "@/assets/ceremonie-new-10.jpg";
 import galleryCentre1 from "@/assets/gallery-centre1.jpg";
 import galleryCentre2 from "@/assets/gallery-centre2.jpg";
 import galleryCentre3 from "@/assets/gallery-centre3.jpg";
@@ -113,6 +117,10 @@ const photos: { src: string; alt: string; category: Category; span?: string }[] 
   { src: ceremonieNew4, alt: "Hôtesse d'accueil MTC – portrait officiel", category: "ceremonie" },
   { src: ceremonieNew5, alt: "Discours d'un participant – cérémonie MTC", category: "ceremonie" },
   { src: ceremonieNew6, alt: "Défilé des lauréats MTC – arrivée à la cérémonie", category: "ceremonie", span: "col-span-2" },
+  { src: ceremonieNew7, alt: "Lauréates MTC en robes bleues – remise de diplômes Esthétique", category: "ceremonie", span: "col-span-2" },
+  { src: ceremonieNew8, alt: "Étudiants Auto-École MTC en tenue de sécurité", category: "ceremonie" },
+  { src: ceremonieNew9, alt: "Photo de groupe – cérémonie de fin de formation MTC", category: "ceremonie", span: "col-span-2" },
+  { src: ceremonieNew10, alt: "Défilé des lauréates – cérémonie MTC en salle", category: "ceremonie", span: "col-span-2" },
   // Maquillage
   { src: galleryMakeup1, alt: "Atelier maquillage – pratique entre étudiantes", category: "maquillage" },
   { src: galleryMakeup2, alt: "Résultat maquillage professionnel", category: "maquillage" },
