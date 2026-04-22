@@ -47,6 +47,12 @@ import galleryCeremonie31 from "@/assets/gallery-ceremonie31.jpg";
 import galleryCeremonie32 from "@/assets/gallery-ceremonie32.jpg";
 import galleryCeremonie33 from "@/assets/gallery-ceremonie33.jpg";
 import galleryCeremonie34 from "@/assets/gallery-ceremonie34.jpg";
+import ceremonieNew1 from "@/assets/ceremonie-new-1.jpg";
+import ceremonieNew2 from "@/assets/ceremonie-new-2.jpg";
+import ceremonieNew3 from "@/assets/ceremonie-new-3.jpg";
+import ceremonieNew4 from "@/assets/ceremonie-new-4.jpg";
+import ceremonieNew5 from "@/assets/ceremonie-new-5.jpg";
+import ceremonieNew6 from "@/assets/ceremonie-new-6.jpg";
 import galleryCentre1 from "@/assets/gallery-centre1.jpg";
 import galleryCentre2 from "@/assets/gallery-centre2.jpg";
 import galleryCentre3 from "@/assets/gallery-centre3.jpg";
@@ -101,6 +107,12 @@ const photos: { src: string; alt: string; category: Category; span?: string }[] 
   { src: galleryCeremonie32, alt: "Diplômée souriante – certificat MTC Esthétique", category: "ceremonie" },
   { src: galleryCeremonie33, alt: "Lauréate avec trophée – cérémonie MTC", category: "ceremonie" },
   { src: galleryCeremonie34, alt: "Présentatrice – discours cérémonie MTC", category: "ceremonie" },
+  { src: ceremonieNew1, alt: "Lauréate MTC – tenue rouge et écharpe bleue", category: "ceremonie" },
+  { src: ceremonieNew2, alt: "Promotion MTC – photo de groupe en uniforme", category: "ceremonie", span: "col-span-2" },
+  { src: ceremonieNew3, alt: "Lauréates MTC – cérémonie en tenue rouge", category: "ceremonie", span: "col-span-2" },
+  { src: ceremonieNew4, alt: "Hôtesse d'accueil MTC – portrait officiel", category: "ceremonie" },
+  { src: ceremonieNew5, alt: "Discours d'un participant – cérémonie MTC", category: "ceremonie" },
+  { src: ceremonieNew6, alt: "Défilé des lauréats MTC – arrivée à la cérémonie", category: "ceremonie", span: "col-span-2" },
   // Maquillage
   { src: galleryMakeup1, alt: "Atelier maquillage – pratique entre étudiantes", category: "maquillage" },
   { src: galleryMakeup2, alt: "Résultat maquillage professionnel", category: "maquillage" },
