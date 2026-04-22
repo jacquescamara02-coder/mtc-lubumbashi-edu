@@ -1,11 +1,13 @@
 import { useState } from "react";
 import { Menu, X, Phone } from "lucide-react";
+import { Link } from "react-router-dom";
 import logo from "@/assets/logo-mtc.jpg";
 
 const navLinks = [
   { label: "Accueil", href: "#accueil" },
   { label: "À propos", href: "#apropos" },
   { label: "Formations", href: "#formations" },
+  { label: "Nos affiches & annonces", href: "/affiches", route: true },
   { label: "Paiement", href: "#paiement" },
   { label: "Nos Sites", href: "#sites" },
   { label: "Contact", href: "#contact" },
@@ -27,11 +29,17 @@ const Navbar = () => {
 
         {/* Desktop */}
         <div className="hidden md:flex items-center gap-8">
-          {navLinks.map((l) => (
-            <a key={l.href} href={l.href} className="text-sm font-medium text-foreground hover:text-primary transition-colors">
-              {l.label}
-            </a>
-          ))}
+          {navLinks.map((l) =>
+            l.route ? (
+              <Link key={l.href} to={l.href} className="text-sm font-medium text-foreground hover:text-primary transition-colors">
+                {l.label}
+              </Link>
+            ) : (
+              <a key={l.href} href={`/${l.href}`} className="text-sm font-medium text-foreground hover:text-primary transition-colors">
+                {l.label}
+              </a>
+            )
+          )}
           <a href="tel:+243816029419" className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-4 py-2 rounded-md text-sm font-semibold hover:opacity-90 transition-opacity">
             <Phone className="h-4 w-4" /> Appelez-nous
           </a>
@@ -46,11 +54,17 @@ const Navbar = () => {
       {/* Mobile menu */}
       {open && (
         <div className="md:hidden bg-background border-t px-4 pb-4">
-          {navLinks.map((l) => (
-            <a key={l.href} href={l.href} onClick={() => setOpen(false)} className="block py-3 text-sm font-medium text-foreground hover:text-primary border-b border-border last:border-0">
-              {l.label}
-            </a>
-          ))}
+          {navLinks.map((l) =>
+            l.route ? (
+              <Link key={l.href} to={l.href} onClick={() => setOpen(false)} className="block py-3 text-sm font-medium text-foreground hover:text-primary border-b border-border">
+                {l.label}
+              </Link>
+            ) : (
+              <a key={l.href} href={`/${l.href}`} onClick={() => setOpen(false)} className="block py-3 text-sm font-medium text-foreground hover:text-primary border-b border-border last:border-0">
+                {l.label}
+              </a>
+            )
+          )}
           <a href="tel:+243816029419" className="mt-3 inline-flex items-center gap-2 bg-primary text-primary-foreground px-4 py-2 rounded-md text-sm font-semibold w-full justify-center">
             <Phone className="h-4 w-4" /> Appelez-nous
           </a>
