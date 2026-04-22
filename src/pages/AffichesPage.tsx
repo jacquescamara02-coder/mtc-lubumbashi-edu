@@ -13,6 +13,7 @@ import afficheInformatique2024 from "@/assets/affiche-informatique-2024.jpg";
 import afficheManagement2025 from "@/assets/affiche-management-2025.jpg";
 import afficheSecretariat2025 from "@/assets/affiche-secretariat-2025.jpg";
 import afficheAutoEcoleNouveau from "@/assets/affiche-autoecole-nouveau.jpg";
+import afficheAnglaisNouveau from "@/assets/affiche-anglais-nouveau.jpg";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 
 type Affiche = {
@@ -33,10 +34,10 @@ const currentAffiches: Affiche[] = [
   },
   {
     id: "a2",
-    title: "Portes ouvertes MTC",
-    date: "Mai 2026",
-    image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=900&q=80",
-    description: "Venez visiter nos sites et rencontrer nos formateurs.",
+    title: "Nouvelle session Anglais",
+    date: "Avril 2026",
+    image: afficheAnglaisNouveau,
+    description: "Inscriptions ouvertes",
   },
   {
     id: "a3",
