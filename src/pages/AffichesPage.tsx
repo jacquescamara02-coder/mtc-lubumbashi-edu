@@ -14,6 +14,7 @@ import afficheManagement2025 from "@/assets/affiche-management-2025.jpg";
 import afficheSecretariat2025 from "@/assets/affiche-secretariat-2025.jpg";
 import afficheAutoEcoleNouveau from "@/assets/affiche-autoecole-nouveau.jpg";
 import afficheAnglaisNouveau from "@/assets/affiche-anglais-nouveau.jpg";
+import afficheCoutureNouveau from "@/assets/affiche-couture-nouveau.jpg";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 
 type Affiche = {
@@ -41,10 +42,10 @@ const currentAffiches: Affiche[] = [
   },
   {
     id: "a3",
-    title: "Formation Auto-École",
+    title: "Nouvelle session Coupe et Couture",
     date: "Avril 2026",
-    image: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=900&q=80",
-    description: "Permis de conduire toutes catégories.",
+    image: afficheCoutureNouveau,
+    description: "Inscriptions ouvertes",
   },
 ];
 
