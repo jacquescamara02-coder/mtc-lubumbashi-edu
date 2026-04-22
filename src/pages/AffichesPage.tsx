@@ -7,6 +7,7 @@ import ScrollToTop from "@/components/ScrollToTop";
 import logo from "@/assets/logo-mtc.jpg";
 import afficheAnglais2025 from "@/assets/affiche-anglais-2025.jpg";
 import afficheEsthetique2025 from "@/assets/affiche-esthetique-2025.jpg";
+import afficheCuisine2025 from "@/assets/affiche-cuisine-2025.jpg";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 
 type Affiche = {
@@ -77,9 +78,9 @@ const archiveAffiches: Affiche[] = [
   },
   {
     id: "ar3",
-    title: "Informatique 2025",
+    title: "Session 2025 - Cuisine",
     date: "Mars 2025",
-    image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=900&q=80",
+    image: afficheCuisine2025,
   },
   {
     id: "ar4",
