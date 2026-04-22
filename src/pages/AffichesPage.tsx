@@ -8,6 +8,7 @@ import logo from "@/assets/logo-mtc.jpg";
 import afficheAnglais2025 from "@/assets/affiche-anglais-2025.jpg";
 import afficheEsthetique2025 from "@/assets/affiche-esthetique-2025.jpg";
 import afficheCuisine2025 from "@/assets/affiche-cuisine-2025.jpg";
+import afficheAutoEcole2025 from "@/assets/affiche-autoecole-2025.jpg";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 
 type Affiche = {
@@ -84,9 +85,9 @@ const archiveAffiches: Affiche[] = [
   },
   {
     id: "ar4",
-    title: "Promotion 2024",
+    title: "Session 2025 - Auto-école",
     date: "Décembre 2024",
-    image: "https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=900&q=80",
+    image: afficheAutoEcole2025,
   },
 ];
 
