@@ -12,6 +12,7 @@ import afficheAutoEcole2025 from "@/assets/affiche-autoecole-2025.jpg";
 import afficheInformatique2024 from "@/assets/affiche-informatique-2024.jpg";
 import afficheManagement2025 from "@/assets/affiche-management-2025.jpg";
 import afficheSecretariat2025 from "@/assets/affiche-secretariat-2025.jpg";
+import afficheAutoEcoleNouveau from "@/assets/affiche-autoecole-nouveau.jpg";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 
 type Affiche = {
@@ -25,10 +26,10 @@ type Affiche = {
 const currentAffiches: Affiche[] = [
   {
     id: "a1",
-    title: "Nouvelle session de formations",
+    title: "Nouvelle session Auto-école",
     date: "Avril 2026",
-    image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=900&q=80",
-    description: "Inscriptions ouvertes pour toutes nos filières.",
+    image: afficheAutoEcoleNouveau,
+    description: "Inscriptions ouvertes",
   },
   {
     id: "a2",
