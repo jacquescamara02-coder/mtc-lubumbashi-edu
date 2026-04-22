@@ -6,6 +6,7 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import ScrollToTop from "@/components/ScrollToTop";
 import logo from "@/assets/logo-mtc.jpg";
 import afficheAnglais2025 from "@/assets/affiche-anglais-2025.jpg";
+import afficheEsthetique2025 from "@/assets/affiche-esthetique-2025.jpg";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 
 type Affiche = {
@@ -70,9 +71,9 @@ const archiveAffiches: Affiche[] = [
   },
   {
     id: "ar2",
-    title: "Formation Couture 2025",
+    title: "Session 2025 - Esthétique",
     date: "Juillet 2025",
-    image: "https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=900&q=80",
+    image: afficheEsthetique2025,
   },
   {
     id: "ar3",
