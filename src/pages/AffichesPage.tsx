@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import ScrollToTop from "@/components/ScrollToTop";
 import logo from "@/assets/logo-mtc.jpg";
+import afficheAnglais2025 from "@/assets/affiche-anglais-2025.jpg";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 
 type Affiche = {
@@ -63,9 +64,9 @@ const announcements = [
 const archiveAffiches: Affiche[] = [
   {
     id: "ar1",
-    title: "Session 2025 - Hôtellerie",
-    date: "Octobre 2025",
-    image: "https://images.unsplash.com/photo-1552566626-52f8b828add9?w=900&q=80",
+    title: "Session 2025 - Anglais",
+    date: "Mars 2025",
+    image: afficheAnglais2025,
   },
   {
     id: "ar2",
