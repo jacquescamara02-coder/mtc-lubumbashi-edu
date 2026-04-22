@@ -57,6 +57,10 @@ import ceremonieNew7 from "@/assets/ceremonie-new-7.jpg";
 import ceremonieNew8 from "@/assets/ceremonie-new-8.jpg";
 import ceremonieNew9 from "@/assets/ceremonie-new-9.jpg";
 import ceremonieNew10 from "@/assets/ceremonie-new-10.jpg";
+import ceremonieNew11 from "@/assets/ceremonie-new-11.jpg";
+import ceremonieNew12 from "@/assets/ceremonie-new-12.jpg";
+import ceremonieNew13 from "@/assets/ceremonie-new-13.jpg";
+import ceremonieNew14 from "@/assets/ceremonie-new-14.jpg";
 import galleryCentre1 from "@/assets/gallery-centre1.jpg";
 import galleryCentre2 from "@/assets/gallery-centre2.jpg";
 import galleryCentre3 from "@/assets/gallery-centre3.jpg";
@@ -121,6 +125,10 @@ const photos: { src: string; alt: string; category: Category; span?: string }[] 
   { src: ceremonieNew8, alt: "Étudiants Auto-École MTC en tenue de sécurité", category: "ceremonie" },
   { src: ceremonieNew9, alt: "Photo de groupe – cérémonie de fin de formation MTC", category: "ceremonie", span: "col-span-2" },
   { src: ceremonieNew10, alt: "Défilé des lauréates – cérémonie MTC en salle", category: "ceremonie", span: "col-span-2" },
+  { src: ceremonieNew11, alt: "Lauréats MTC en toges vertes – jet de chapeaux de graduation", category: "ceremonie", span: "col-span-2" },
+  { src: ceremonieNew12, alt: "Diplômés MTC – promotion masculine en toges vertes", category: "ceremonie", span: "col-span-2" },
+  { src: ceremonieNew13, alt: "Lauréats MTC en toges vertes – moment de célébration", category: "ceremonie", span: "col-span-2" },
+  { src: ceremonieNew14, alt: "Diplômés Auto-École & Sécurité MTC – gilets jaunes et casques", category: "ceremonie", span: "col-span-2" },
   // Maquillage
   { src: galleryMakeup1, alt: "Atelier maquillage – pratique entre étudiantes", category: "maquillage" },
   { src: galleryMakeup2, alt: "Résultat maquillage professionnel", category: "maquillage" },
