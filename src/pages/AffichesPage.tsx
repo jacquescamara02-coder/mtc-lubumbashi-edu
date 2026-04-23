@@ -6,6 +6,10 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import ScrollToTop from "@/components/ScrollToTop";
 import logo from "@/assets/logo-mtc.jpg";
 import videoMtc from "@/assets/video-mtc.mp4";
+import videoMtc2 from "@/assets/video-mtc-2.mp4";
+import videoMtc3 from "@/assets/video-mtc-3.mp4";
+import videoMtc4 from "@/assets/video-mtc-4.mp4";
+import videoMtc5 from "@/assets/video-mtc-5.mp4";
 import videoCover from "@/assets/centre-new-1.jpg";
 import afficheAnglais2025 from "@/assets/affiche-anglais-2025.jpg";
 import afficheEsthetique2025 from "@/assets/affiche-esthetique-2025.jpg";
@@ -40,6 +44,46 @@ const videos: VideoItem[] = [
     src: videoMtc,
     poster: videoCover,
     category: "Présentation",
+  },
+  {
+    id: "v2",
+    title: "Vie au Centre MTC",
+    description:
+      "Découvrez le quotidien des apprenants et l'engagement de nos formateurs au sein du centre.",
+    date: "2026",
+    src: videoMtc2,
+    poster: videoCover,
+    category: "Réalisations",
+  },
+  {
+    id: "v3",
+    title: "Nos Formations en Action",
+    description:
+      "Aperçu de nos sessions pratiques : esthétique, couture, informatique et bien plus encore.",
+    date: "2026",
+    src: videoMtc3,
+    poster: videoCover,
+    category: "Formations",
+  },
+  {
+    id: "v4",
+    title: "Témoignages et Réussites",
+    description:
+      "Les moments forts et les réussites de nos apprenants tout au long de leur parcours.",
+    date: "2026",
+    src: videoMtc4,
+    poster: videoCover,
+    category: "Témoignages",
+  },
+  {
+    id: "v5",
+    title: "Événements et Cérémonies",
+    description:
+      "Retour sur les événements marquants et les cérémonies organisées par Mamre Training Center.",
+    date: "2026",
+    src: videoMtc5,
+    poster: videoCover,
+    category: "Événements",
   },
 ];
 
