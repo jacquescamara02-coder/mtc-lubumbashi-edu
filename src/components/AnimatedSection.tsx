@@ -29,7 +29,7 @@ const AnimatedSection = ({
     <div
       ref={ref}
       className={cn(
-        isVisible ? animationClass[animation] : "opacity-0",
+        isVisible ? `opacity-100 ${animationClass[animation]}` : "opacity-0",
         className
       )}
       style={{ animationDelay: delay }}
