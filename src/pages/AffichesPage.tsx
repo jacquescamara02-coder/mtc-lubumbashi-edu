@@ -1,10 +1,12 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowLeft, Megaphone, Archive, Calendar, Sparkles } from "lucide-react";
+import { ArrowLeft, Megaphone, Archive, Calendar, Sparkles, Play, Film } from "lucide-react";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import ScrollToTop from "@/components/ScrollToTop";
 import logo from "@/assets/logo-mtc.jpg";
+import videoMtc from "@/assets/video-mtc.mp4";
+import videoCover from "@/assets/centre-new-1.jpg";
 import afficheAnglais2025 from "@/assets/affiche-anglais-2025.jpg";
 import afficheEsthetique2025 from "@/assets/affiche-esthetique-2025.jpg";
 import afficheCuisine2025 from "@/assets/affiche-cuisine-2025.jpg";
@@ -17,6 +19,29 @@ import afficheAnglaisNouveau from "@/assets/affiche-anglais-nouveau.jpg";
 import afficheCoutureNouveau from "@/assets/affiche-couture-nouveau.jpg";
 import afficheEnginsLourdsNouveau from "@/assets/affiche-engins-lourds-nouveau.jpg";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
+
+type VideoItem = {
+  id: string;
+  title: string;
+  description: string;
+  date: string;
+  src: string;
+  poster: string;
+  category: string;
+};
+
+const videos: VideoItem[] = [
+  {
+    id: "v1",
+    title: "Présentation du Centre MTC",
+    description:
+      "Visite guidée de Mamre Training Center : nos installations, nos formations et l'ambiance qui fait notre force.",
+    date: "2026",
+    src: videoMtc,
+    poster: videoCover,
+    category: "Présentation",
+  },
+];
 
 type Affiche = {
   id: string;
@@ -125,6 +150,7 @@ const archiveAffiches: Affiche[] = [
 
 const AffichesPage = () => {
   const [preview, setPreview] = useState<Affiche | null>(null);
+  const [activeVideo, setActiveVideo] = useState<VideoItem | null>(null);
 
   return (
     <>
@@ -211,6 +237,67 @@ const AffichesPage = () => {
                   {a.description && (
                     <p className="text-sm text-muted-foreground line-clamp-2">{a.description}</p>
                   )}
+                </div>
+              </button>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Nos vidéos et réalisations */}
+      <section className="py-12 md:py-20 bg-gradient-to-b from-background to-muted/40">
+        <div className="container mx-auto px-4">
+          <div className="mb-8 md:mb-10">
+            <div className="flex items-center gap-2 text-primary mb-2">
+              <Film className="h-5 w-5" />
+              <span className="text-xs md:text-sm font-semibold uppercase tracking-wider">
+                Vidéothèque
+              </span>
+            </div>
+            <h2 className="font-heading text-2xl md:text-4xl font-bold text-foreground">
+              Nos vidéos et réalisations
+            </h2>
+            <p className="text-sm md:text-base text-muted-foreground mt-2 max-w-2xl">
+              Découvrez en images et en mouvement la vie du centre, nos formations
+              et nos évènements marquants.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
+            {videos.map((v) => (
+              <button
+                key={v.id}
+                onClick={() => setActiveVideo(v)}
+                className="group text-left bg-card rounded-2xl overflow-hidden border border-border shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+              >
+                <div className="relative aspect-video overflow-hidden bg-black">
+                  <img
+                    src={v.poster}
+                    alt={v.title}
+                    loading="lazy"
+                    className="w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <span className="h-14 w-14 md:h-16 md:w-16 rounded-full bg-primary/95 text-primary-foreground flex items-center justify-center shadow-lg ring-4 ring-background/30 group-hover:scale-110 transition-transform">
+                      <Play className="h-6 w-6 md:h-7 md:w-7 fill-current ml-0.5" />
+                    </span>
+                  </div>
+                  <div className="absolute top-3 left-3 bg-accent text-accent-foreground text-[11px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wide">
+                    {v.category}
+                  </div>
+                </div>
+                <div className="p-4 md:p-5">
+                  <div className="flex items-center gap-1.5 text-xs text-muted-foreground mb-1.5">
+                    <Calendar className="h-3.5 w-3.5" />
+                    {v.date}
+                  </div>
+                  <h3 className="font-heading font-bold text-base md:text-lg text-foreground mb-1 group-hover:text-primary transition-colors">
+                    {v.title}
+                  </h3>
+                  <p className="text-sm text-muted-foreground line-clamp-2">
+                    {v.description}
+                  </p>
                 </div>
               </button>
             ))}
@@ -311,6 +398,37 @@ const AffichesPage = () => {
                 {preview.description && (
                   <p className="text-sm text-muted-foreground mt-2">{preview.description}</p>
                 )}
+              </div>
+            </div>
+          )}
+        </DialogContent>
+      </Dialog>
+
+      <Dialog open={!!activeVideo} onOpenChange={(o) => !o && setActiveVideo(null)}>
+        <DialogContent className="max-w-4xl p-0 overflow-hidden bg-background">
+          {activeVideo && (
+            <div>
+              <video
+                src={activeVideo.src}
+                poster={activeVideo.poster}
+                controls
+                autoPlay
+                playsInline
+                className="w-full aspect-video bg-black"
+              >
+                Votre navigateur ne supporte pas la lecture vidéo.
+              </video>
+              <div className="p-4 md:p-6">
+                <div className="flex items-center gap-1.5 text-xs text-muted-foreground mb-1.5">
+                  <Calendar className="h-3.5 w-3.5" />
+                  {activeVideo.date} · {activeVideo.category}
+                </div>
+                <h3 className="font-heading font-bold text-lg md:text-xl text-foreground">
+                  {activeVideo.title}
+                </h3>
+                <p className="text-sm text-muted-foreground mt-2">
+                  {activeVideo.description}
+                </p>
               </div>
             </div>
           )}
