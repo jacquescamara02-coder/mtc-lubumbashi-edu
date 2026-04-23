@@ -8,6 +8,7 @@ const navLinks = [
   { label: "À propos", href: "#apropos" },
   { label: "Formations", href: "#formations" },
   { label: "Nos affiches & annonces", href: "/affiches", route: true },
+  { label: "Galerie", href: "#galerie" },
   { label: "Paiement", href: "#paiement" },
   { label: "Nos Sites", href: "#sites" },
   { label: "Contact", href: "#contact" },
