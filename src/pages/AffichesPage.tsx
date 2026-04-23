@@ -404,6 +404,37 @@ const AffichesPage = () => {
         </DialogContent>
       </Dialog>
 
+      <Dialog open={!!activeVideo} onOpenChange={(o) => !o && setActiveVideo(null)}>
+        <DialogContent className="max-w-4xl p-0 overflow-hidden bg-background">
+          {activeVideo && (
+            <div>
+              <video
+                src={activeVideo.src}
+                poster={activeVideo.poster}
+                controls
+                autoPlay
+                playsInline
+                className="w-full aspect-video bg-black"
+              >
+                Votre navigateur ne supporte pas la lecture vidéo.
+              </video>
+              <div className="p-4 md:p-6">
+                <div className="flex items-center gap-1.5 text-xs text-muted-foreground mb-1.5">
+                  <Calendar className="h-3.5 w-3.5" />
+                  {activeVideo.date} · {activeVideo.category}
+                </div>
+                <h3 className="font-heading font-bold text-lg md:text-xl text-foreground">
+                  {activeVideo.title}
+                </h3>
+                <p className="text-sm text-muted-foreground mt-2">
+                  {activeVideo.description}
+                </p>
+              </div>
+            </div>
+          )}
+        </DialogContent>
+      </Dialog>
+
       <Footer />
       <WhatsAppButton />
       <ScrollToTop />
