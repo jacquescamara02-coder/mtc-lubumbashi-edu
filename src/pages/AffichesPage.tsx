@@ -244,6 +244,67 @@ const AffichesPage = () => {
         </div>
       </section>
 
+      {/* Nos vidéos et réalisations */}
+      <section className="py-12 md:py-20 bg-gradient-to-b from-background to-muted/40">
+        <div className="container mx-auto px-4">
+          <div className="mb-8 md:mb-10">
+            <div className="flex items-center gap-2 text-primary mb-2">
+              <Film className="h-5 w-5" />
+              <span className="text-xs md:text-sm font-semibold uppercase tracking-wider">
+                Vidéothèque
+              </span>
+            </div>
+            <h2 className="font-heading text-2xl md:text-4xl font-bold text-foreground">
+              Nos vidéos et réalisations
+            </h2>
+            <p className="text-sm md:text-base text-muted-foreground mt-2 max-w-2xl">
+              Découvrez en images et en mouvement la vie du centre, nos formations
+              et nos évènements marquants.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
+            {videos.map((v) => (
+              <button
+                key={v.id}
+                onClick={() => setActiveVideo(v)}
+                className="group text-left bg-card rounded-2xl overflow-hidden border border-border shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+              >
+                <div className="relative aspect-video overflow-hidden bg-black">
+                  <img
+                    src={v.poster}
+                    alt={v.title}
+                    loading="lazy"
+                    className="w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <span className="h-14 w-14 md:h-16 md:w-16 rounded-full bg-primary/95 text-primary-foreground flex items-center justify-center shadow-lg ring-4 ring-background/30 group-hover:scale-110 transition-transform">
+                      <Play className="h-6 w-6 md:h-7 md:w-7 fill-current ml-0.5" />
+                    </span>
+                  </div>
+                  <div className="absolute top-3 left-3 bg-accent text-accent-foreground text-[11px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wide">
+                    {v.category}
+                  </div>
+                </div>
+                <div className="p-4 md:p-5">
+                  <div className="flex items-center gap-1.5 text-xs text-muted-foreground mb-1.5">
+                    <Calendar className="h-3.5 w-3.5" />
+                    {v.date}
+                  </div>
+                  <h3 className="font-heading font-bold text-base md:text-lg text-foreground mb-1 group-hover:text-primary transition-colors">
+                    {v.title}
+                  </h3>
+                  <p className="text-sm text-muted-foreground line-clamp-2">
+                    {v.description}
+                  </p>
+                </div>
+              </button>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Annonces officielles */}
       <section className="py-12 md:py-20 bg-muted/30">
         <div className="container mx-auto px-4">
