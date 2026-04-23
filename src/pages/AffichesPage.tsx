@@ -1,10 +1,12 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowLeft, Megaphone, Archive, Calendar, Sparkles } from "lucide-react";
+import { ArrowLeft, Megaphone, Archive, Calendar, Sparkles, Play, Film } from "lucide-react";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import ScrollToTop from "@/components/ScrollToTop";
 import logo from "@/assets/logo-mtc.jpg";
+import videoMtc from "@/assets/video-mtc.mp4";
+import videoCover from "@/assets/centre-new-1.jpg";
 import afficheAnglais2025 from "@/assets/affiche-anglais-2025.jpg";
 import afficheEsthetique2025 from "@/assets/affiche-esthetique-2025.jpg";
 import afficheCuisine2025 from "@/assets/affiche-cuisine-2025.jpg";
@@ -17,6 +19,29 @@ import afficheAnglaisNouveau from "@/assets/affiche-anglais-nouveau.jpg";
 import afficheCoutureNouveau from "@/assets/affiche-couture-nouveau.jpg";
 import afficheEnginsLourdsNouveau from "@/assets/affiche-engins-lourds-nouveau.jpg";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
+
+type VideoItem = {
+  id: string;
+  title: string;
+  description: string;
+  date: string;
+  src: string;
+  poster: string;
+  category: string;
+};
+
+const videos: VideoItem[] = [
+  {
+    id: "v1",
+    title: "Présentation du Centre MTC",
+    description:
+      "Visite guidée de Mamre Training Center : nos installations, nos formations et l'ambiance qui fait notre force.",
+    date: "2026",
+    src: videoMtc,
+    poster: videoCover,
+    category: "Présentation",
+  },
+];
 
 type Affiche = {
   id: string;
@@ -125,6 +150,7 @@ const archiveAffiches: Affiche[] = [
 
 const AffichesPage = () => {
   const [preview, setPreview] = useState<Affiche | null>(null);
+  const [activeVideo, setActiveVideo] = useState<VideoItem | null>(null);
 
   return (
     <>
