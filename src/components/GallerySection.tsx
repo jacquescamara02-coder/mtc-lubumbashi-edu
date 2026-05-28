@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
+import { useSiteText } from "@/hooks/useSiteContent";
 import galleryCeremony from "@/assets/gallery-ceremony.jpg";
 import galleryMakeup1 from "@/assets/gallery-makeup1.jpg";
 import galleryMakeup2 from "@/assets/gallery-makeup2.jpg";
@@ -176,6 +177,9 @@ const photos: { src: string; alt: string; category: Category; span?: string }[] 
 const GallerySection = () => {
   const [lightbox, setLightbox] = useState<number | null>(null);
   const [activeCategory, setActiveCategory] = useState<Category>("all");
+  const eyebrow = useSiteText("gallery.eyebrow", "Galerie");
+  const title = useSiteText("gallery.title", "Nos Activités en Images");
+  const subtitle = useSiteText("gallery.subtitle", "Découvrez l'environnement d'apprentissage, les ateliers pratiques et la vie au sein du centre MTC.");
 
   const filtered = activeCategory === "all" ? photos : photos.filter((p) => p.category === activeCategory);
 
@@ -190,11 +194,9 @@ const GallerySection = () => {
     <section id="galerie" className="section-padding bg-background">
       <div className="container mx-auto">
         <div className="text-center mb-10">
-          <p className="text-sm font-semibold uppercase tracking-widest text-red mb-2">Galerie</p>
-          <h2 className="font-heading font-bold text-3xl md:text-4xl text-foreground">Nos Activités en Images</h2>
-          <p className="text-muted-foreground mt-3 max-w-xl mx-auto">
-            Découvrez l'environnement d'apprentissage, les ateliers pratiques et la vie au sein du centre MTC.
-          </p>
+          <p className="text-sm font-semibold uppercase tracking-widest text-red mb-2">{eyebrow}</p>
+          <h2 className="font-heading font-bold text-3xl md:text-4xl text-foreground">{title}</h2>
+          <p className="text-muted-foreground mt-3 max-w-xl mx-auto whitespace-pre-line">{subtitle}</p>
         </div>
 
         {/* Category Filter */}

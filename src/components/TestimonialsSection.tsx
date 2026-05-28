@@ -1,10 +1,11 @@
 import { Star, Quote } from "lucide-react";
+import { useSiteText, useSiteImage } from "@/hooks/useSiteContent";
 import photo1 from "@/assets/testimonial-1.jpg";
 import photo2 from "@/assets/testimonial-2.jpg";
 import photo3 from "@/assets/testimonial-3.jpg";
 import photo4 from "@/assets/testimonial-4.jpg";
 
-const testimonials = [
+const baseTestimonials = [
   {
     name: "Patrick Kabongo",
     formation: "Électricité Industrielle",
@@ -35,17 +36,23 @@ const testimonials = [
   },
 ];
 
-const TestimonialsSection = () => (
+const TestimonialsSection = () => {
+  const eyebrow = useSiteText("testimonials.eyebrow", "Témoignages");
+  const title = useSiteText("testimonials.title", "Ce que disent nos anciens étudiants");
+  const subtitle = useSiteText("testimonials.subtitle", "Découvrez les parcours inspirants de ceux qui ont été formés chez MTC.");
+  const p1 = useSiteImage("testimonials.photo_1", photo1);
+  const p2 = useSiteImage("testimonials.photo_2", photo2);
+  const p3 = useSiteImage("testimonials.photo_3", photo3);
+  const p4 = useSiteImage("testimonials.photo_4", photo4);
+  const photos = [p1, p2, p3, p4];
+  const testimonials = baseTestimonials.map((t, i) => ({ ...t, photo: photos[i] }));
+  return (
   <section className="section-padding bg-section-light">
     <div className="container mx-auto">
       <div className="text-center mb-12">
-        <p className="text-sm font-semibold uppercase tracking-widest text-red mb-2">Témoignages</p>
-        <h2 className="font-heading font-bold text-3xl md:text-4xl text-foreground">
-          Ce que disent nos anciens étudiants
-        </h2>
-        <p className="text-muted-foreground mt-3 max-w-xl mx-auto">
-          Découvrez les parcours inspirants de ceux qui ont été formés chez MTC.
-        </p>
+        <p className="text-sm font-semibold uppercase tracking-widest text-red mb-2">{eyebrow}</p>
+        <h2 className="font-heading font-bold text-3xl md:text-4xl text-foreground">{title}</h2>
+        <p className="text-muted-foreground mt-3 max-w-xl mx-auto whitespace-pre-line">{subtitle}</p>
       </div>
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -80,6 +87,7 @@ const TestimonialsSection = () => (
       </div>
     </div>
   </section>
-);
+  );
+};
 
 export default TestimonialsSection;

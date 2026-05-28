@@ -3,16 +3,17 @@ import { useAuth } from "@/hooks/useAuth";
 import { Link, Outlet, useLocation } from "react-router-dom";
 import {
   LayoutDashboard, Settings, Image, FileText, MessageSquare, Newspaper,
-  LogOut, Menu, X, ChevronRight, Home
+  LogOut, Menu, X, ChevronRight, Home, Layers
 } from "lucide-react";
 
 const navItems = [
   { label: "Tableau de bord", href: "/admin", icon: LayoutDashboard },
+  { label: "Contenu du site", href: "/admin/content", icon: Layers },
   { label: "Services", href: "/admin/services", icon: Settings },
   { label: "Galerie", href: "/admin/gallery", icon: Image },
   { label: "Témoignages", href: "/admin/testimonials", icon: MessageSquare },
   { label: "Articles", href: "/admin/articles", icon: Newspaper },
-  { label: "Textes du site", href: "/admin/texts", icon: FileText },
+  { label: "Textes (avancé)", href: "/admin/texts", icon: FileText },
 ];
 
 const AdminLayout = () => {
