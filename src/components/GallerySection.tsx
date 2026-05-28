@@ -78,7 +78,6 @@ import centreNew9 from "@/assets/centre-new-9.jpg";
 import centreNew10 from "@/assets/centre-new-10.jpg";
 
 type Category = "all" | "ceremonie" | "coiffure" | "maquillage" | "autoecole" | "centre";
-import { useSiteText } from "@/hooks/useSiteContent";
 
 const categories: { key: Category; label: string }[] = [
   { key: "all", label: "Tout" },
