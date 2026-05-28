@@ -2,9 +2,9 @@ import { useAuth } from "@/hooks/useAuth";
 import { Navigate } from "react-router-dom";
 
 const ProtectedRoute = ({ children }: { children: React.ReactNode }) => {
-  const { user, isAdmin, loading } = useAuth();
+  const { user, isAdmin, loading, roleLoading } = useAuth();
 
-  if (loading) {
+  if (loading || (user && roleLoading)) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-background">
         <div className="h-8 w-8 border-4 border-primary/30 border-t-primary rounded-full animate-spin" />
