@@ -146,25 +146,67 @@ export type Database = {
         }
         Relationships: []
       }
+      site_images: {
+        Row: {
+          created_at: string
+          id: string
+          image_url: string | null
+          key: string
+          label: string
+          section: string
+          sort_order: number
+          updated_at: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          image_url?: string | null
+          key: string
+          label: string
+          section: string
+          sort_order?: number
+          updated_at?: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          image_url?: string | null
+          key?: string
+          label?: string
+          section?: string
+          sort_order?: number
+          updated_at?: string
+        }
+        Relationships: []
+      }
       site_texts: {
         Row: {
           id: string
           key: string
+          kind: string
+          label: string | null
           section: string | null
+          sort_order: number
           updated_at: string
           value: string
         }
         Insert: {
           id?: string
           key: string
+          kind?: string
+          label?: string | null
           section?: string | null
+          sort_order?: number
           updated_at?: string
           value: string
         }
         Update: {
           id?: string
           key?: string
+          kind?: string
+          label?: string | null
           section?: string | null
+          sort_order?: number
           updated_at?: string
           value?: string
         }
