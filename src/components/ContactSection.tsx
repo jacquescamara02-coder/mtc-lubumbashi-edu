@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Phone, MapPin, MessageCircle, FileText, Send, UserPlus, Mail } from "lucide-react";
+import { useSiteText } from "@/hooks/useSiteContent";
 
 const formationOptions = [
   "Informatique & Multimédia",
@@ -32,6 +33,18 @@ const inputClass =
 
 const ContactSection = () => {
   const [tab, setTab] = useState<Tab>("info");
+
+  const eyebrow = useSiteText("contact.eyebrow", "Contactez-nous");
+  const title = useSiteText("contact.title", "Restons en Contact");
+  const subtitle = useSiteText("contact.subtitle", "Demandez des informations sur nos formations ou inscrivez-vous directement en ligne.");
+  const addressLine1 = useSiteText("contact.address_line_1", "Q. Makomeno, Av. Lomami coin des Usines, N°04");
+  const addressLine2 = useSiteText("contact.address_line_2", "Commune de Lubumbashi, Haut-Katanga, RDC");
+  const phone1 = useSiteText("contact.phone_1", "+243 816 029 419");
+  const phone2 = useSiteText("contact.phone_2", "+243 993 132 628");
+  const whatsapp = useSiteText("contact.whatsapp", "243816029419");
+  const rccm = useSiteText("contact.rccm", "CD/L'SHI/24-B-01324");
+  const idNat = useSiteText("contact.id_nat", "05-P8501-N55251L");
+  const impot = useSiteText("contact.impot", "A2425544S");
 
   useEffect(() => {
     const handler = () => setTab("inscription");
@@ -73,9 +86,9 @@ const ContactSection = () => {
     <section id="contact" className="section-padding bg-background">
       <div className="container mx-auto">
         <div className="text-center mb-12">
-          <p className="text-sm font-semibold uppercase tracking-widest text-red mb-2">Contactez-nous</p>
-          <h2 className="font-heading font-bold text-3xl md:text-4xl text-foreground">Restons en Contact</h2>
-          <p className="text-muted-foreground mt-2 max-w-xl mx-auto text-sm">Demandez des informations sur nos formations ou inscrivez-vous directement en ligne.</p>
+          <p className="text-sm font-semibold uppercase tracking-widest text-red mb-2">{eyebrow}</p>
+          <h2 className="font-heading font-bold text-3xl md:text-4xl text-foreground">{title}</h2>
+          <p className="text-muted-foreground mt-2 max-w-xl mx-auto text-sm">{subtitle}</p>
         </div>
 
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8">
@@ -87,8 +100,8 @@ const ContactSection = () => {
               </div>
               <div>
                 <h4 className="font-heading font-semibold text-foreground">Adresse</h4>
-                <p className="text-sm text-muted-foreground">Q. Makomeno, Av. Lomami coin des Usines, N°04</p>
-                <p className="text-sm text-muted-foreground">Commune de Lubumbashi, Haut-Katanga, RDC</p>
+                <p className="text-sm text-muted-foreground">{addressLine1}</p>
+                <p className="text-sm text-muted-foreground">{addressLine2}</p>
               </div>
             </div>
             <div className="flex items-start gap-4">
@@ -97,8 +110,8 @@ const ContactSection = () => {
               </div>
               <div>
                 <h4 className="font-heading font-semibold text-foreground">Téléphone</h4>
-                <a href="tel:+243816029419" className="text-sm text-primary hover:underline block">+243 816 029 419</a>
-                <a href="tel:+243993132628" className="text-sm text-primary hover:underline block">+243 993 132 628</a>
+                <a href={`tel:${phone1.replace(/\s/g, "")}`} className="text-sm text-primary hover:underline block">{phone1}</a>
+                <a href={`tel:${phone2.replace(/\s/g, "")}`} className="text-sm text-primary hover:underline block">{phone2}</a>
               </div>
             </div>
             <div className="flex items-start gap-4">
@@ -107,7 +120,7 @@ const ContactSection = () => {
               </div>
               <div>
                 <h4 className="font-heading font-semibold text-foreground">WhatsApp</h4>
-                <a href="https://wa.me/243816029419" target="_blank" rel="noopener noreferrer" className="text-sm text-primary hover:underline">
+                <a href={`https://wa.me/${whatsapp}`} target="_blank" rel="noopener noreferrer" className="text-sm text-primary hover:underline">
                   Écrivez-nous sur WhatsApp
                 </a>
               </div>
@@ -118,9 +131,9 @@ const ContactSection = () => {
               </div>
               <div>
                 <h4 className="font-heading font-semibold text-foreground">Informations légales</h4>
-                <p className="text-xs text-muted-foreground">RCCM : CD/L'SHI/24-B-01324</p>
-                <p className="text-xs text-muted-foreground">ID NAT : 05-P8501-N55251L</p>
-                <p className="text-xs text-muted-foreground">N° Impôt : A2425544S</p>
+                <p className="text-xs text-muted-foreground">RCCM : {rccm}</p>
+                <p className="text-xs text-muted-foreground">ID NAT : {idNat}</p>
+                <p className="text-xs text-muted-foreground">N° Impôt : {impot}</p>
               </div>
             </div>
 
