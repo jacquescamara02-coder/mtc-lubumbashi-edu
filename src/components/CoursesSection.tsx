@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useSiteText } from "@/hooks/useSiteContent";
 import {
   Monitor, Scissors, Palette, ChefHat, Flame, Wrench, Languages,
   Plane, Building2, ShieldCheck, FileText, Truck, Car, Cpu,
@@ -163,6 +164,18 @@ const CoursesSection = () => {
   const total = categories.reduce((sum, c) => sum + c.formations.length, 0);
   const activeCat = categories[activeCategory];
 
+  const eyebrow = useSiteText("courses.eyebrow", "Nos programmes");
+  const title = useSiteText("courses.title", `Plus de ${total} Formations Professionnelles`);
+  const subtitle = useSiteText(
+    "courses.subtitle",
+    `Des formations pratiques et certifiantes dans ${categories.length} domaines d'expertise. Chaque parcours inclut une formation théorique, une pratique encadrée et un brevet reconnu.`
+  );
+  const ctaTitle = useSiteText("courses.cta_title", "Intéressé par une formation ?");
+  const ctaSubtitle = useSiteText(
+    "courses.cta_subtitle",
+    "Contactez-nous pour obtenir plus d'informations sur les inscriptions, les horaires et les modalités de paiement."
+  );
+
   // Preload all category images on mount
   useEffect(() => {
     const preloadPromises = categories.map((cat) => {
@@ -185,12 +198,12 @@ const CoursesSection = () => {
     <section id="formations" className="section-padding bg-background">
       <div className="container mx-auto">
         <div className="text-center mb-12">
-          <p className="text-sm font-semibold uppercase tracking-widest text-red mb-2">Nos programmes</p>
+          <p className="text-sm font-semibold uppercase tracking-widest text-red mb-2">{eyebrow}</p>
           <h2 className="font-heading font-bold text-3xl md:text-4xl text-foreground">
-            Plus de {total} Formations Professionnelles
+            {title}
           </h2>
           <p className="text-muted-foreground mt-3 max-w-2xl mx-auto">
-            Des formations pratiques et certifiantes dans {categories.length} domaines d'expertise. Chaque parcours inclut une formation théorique, une pratique encadrée et un brevet reconnu.
+            {subtitle}
           </p>
         </div>
 
@@ -266,9 +279,9 @@ const CoursesSection = () => {
 
         {/* CTA */}
         <div className="text-center mt-12 bg-section-light rounded-2xl p-8 border">
-          <h3 className="font-heading font-bold text-xl text-foreground mb-2">Intéressé par une formation ?</h3>
+          <h3 className="font-heading font-bold text-xl text-foreground mb-2">{ctaTitle}</h3>
           <p className="text-muted-foreground mb-6 max-w-lg mx-auto text-sm">
-            Contactez-nous pour obtenir plus d'informations sur les inscriptions, les horaires et les modalités de paiement.
+            {ctaSubtitle}
           </p>
           <div className="flex flex-wrap justify-center gap-3">
             <a
