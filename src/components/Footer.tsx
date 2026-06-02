@@ -1,5 +1,6 @@
 import { Facebook } from "lucide-react";
 import logo from "@/assets/logo-mtc.jpg";
+import { useSiteText } from "@/hooks/useSiteContent";
 
 const TikTokIcon = ({ className }: { className?: string }) => (
   <svg
@@ -13,7 +14,12 @@ const TikTokIcon = ({ className }: { className?: string }) => (
   </svg>
 );
 
-const Footer = () => (
+const Footer = () => {
+  const tagline = useSiteText("footer.tagline", "Centre de Formation Professionnelle Mamre Training Center. Former pour transformer.");
+  const facebookUrl = useSiteText("footer.facebook_url", "https://www.facebook.com/share/p/1EVc8mDhaw/");
+  const tiktokUrl = useSiteText("footer.tiktok_url", "https://www.tiktok.com/@mamretrainingcenter");
+
+  return (
   <footer className="bg-primary text-primary-foreground py-12">
     <div className="container mx-auto px-4">
       <div className="grid md:grid-cols-3 gap-8 mb-8">
@@ -22,7 +28,7 @@ const Footer = () => (
             <img src={logo} alt="MTC Logo" className="h-10 w-10 rounded-full object-cover" />
             <span className="font-heading font-bold">MTC</span>
           </div>
-          <p className="text-sm text-primary-foreground/70 mb-3">Centre de Formation Professionnelle Mamre Training Center. Former pour transformer.</p>
+          <p className="text-sm text-primary-foreground/70 mb-3">{tagline}</p>
           <div className="text-xs text-primary-foreground/50 space-y-0.5">
             <p>RCCM : CD/L'SHI/24-B-01324</p>
             <p>ID NAT : 05-P8501-N55251L</p>
@@ -50,7 +56,7 @@ const Footer = () => (
           </ul>
           <div className="mt-4 flex items-center gap-3">
             <a
-              href="https://www.facebook.com/share/p/1EVc8mDhaw/"
+              href={facebookUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-primary-foreground/10 hover:bg-primary-foreground/20 text-primary-foreground px-4 py-2 rounded-lg transition-colors text-sm font-semibold"
@@ -59,7 +65,7 @@ const Footer = () => (
               Suivez-nous
             </a>
             <a
-              href="https://www.tiktok.com/@mamretrainingcenter"
+              href={tiktokUrl}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="TikTok"
@@ -76,6 +82,7 @@ const Footer = () => (
       </div>
     </div>
   </footer>
-);
+  );
+};
 
 export default Footer;
