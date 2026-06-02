@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useSiteText } from "@/hooks/useSiteContent";
 import { Smartphone, Building2, Banknote, Copy, Check, ChevronRight, GraduationCap, Receipt, CreditCard, ArrowLeft } from "lucide-react";
 
 const formations = [
@@ -110,6 +111,13 @@ const PaymentSection = () => {
   const [selectedFormation, setSelectedFormation] = useState("");
   const [selectedFee, setSelectedFee] = useState("");
 
+  const eyebrow = useSiteText("payment.eyebrow", "Paiement");
+  const title = useSiteText("payment.title", "Effectuez Votre Paiement");
+  const subtitle = useSiteText(
+    "payment.subtitle",
+    "Suivez les étapes ci-dessous pour régler vos frais de formation en toute simplicité."
+  );
+
   const handleFormationSelect = (f: string) => {
     setSelectedFormation(f);
     setStep(2);
@@ -135,10 +143,10 @@ const PaymentSection = () => {
     <section id="paiement" className="section-padding bg-background">
       <div className="container mx-auto">
         <div className="text-center mb-12">
-          <p className="text-sm font-semibold uppercase tracking-widest text-red mb-2">Paiement</p>
-          <h2 className="font-heading font-bold text-3xl md:text-4xl text-foreground">Effectuez Votre Paiement</h2>
+          <p className="text-sm font-semibold uppercase tracking-widest text-red mb-2">{eyebrow}</p>
+          <h2 className="font-heading font-bold text-3xl md:text-4xl text-foreground">{title}</h2>
           <p className="text-muted-foreground mt-3 max-w-xl mx-auto">
-            Suivez les étapes ci-dessous pour régler vos frais de formation en toute simplicité.
+            {subtitle}
           </p>
         </div>
 

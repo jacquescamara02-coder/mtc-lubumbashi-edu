@@ -1,4 +1,5 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { useSiteText } from "@/hooks/useSiteContent";
 
 const faqs = [
   {
@@ -35,13 +36,18 @@ const faqs = [
   },
 ];
 
-const FAQSection = () => (
+const FAQSection = () => {
+  const eyebrow = useSiteText("faq.eyebrow", "FAQ");
+  const title = useSiteText("faq.title", "Questions Fréquentes");
+  const subtitle = useSiteText("faq.subtitle", "Tout ce que vous devez savoir avant de vous inscrire.");
+
+  return (
   <section id="faq" className="section-padding bg-section-light">
     <div className="container mx-auto max-w-3xl">
       <div className="text-center mb-12">
-        <p className="text-sm font-semibold uppercase tracking-widest text-red mb-2">FAQ</p>
-        <h2 className="font-heading font-bold text-3xl md:text-4xl text-foreground">Questions Fréquentes</h2>
-        <p className="text-muted-foreground mt-3">Tout ce que vous devez savoir avant de vous inscrire.</p>
+        <p className="text-sm font-semibold uppercase tracking-widest text-red mb-2">{eyebrow}</p>
+        <h2 className="font-heading font-bold text-3xl md:text-4xl text-foreground">{title}</h2>
+        <p className="text-muted-foreground mt-3">{subtitle}</p>
       </div>
 
       <Accordion type="single" collapsible className="space-y-3">
@@ -58,6 +64,7 @@ const FAQSection = () => (
       </Accordion>
     </div>
   </section>
-);
+  );
+};
 
 export default FAQSection;
