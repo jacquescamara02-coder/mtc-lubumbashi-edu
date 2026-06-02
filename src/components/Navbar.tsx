@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Menu, X, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 import logo from "@/assets/logo-mtc.jpg";
+import { useSiteText } from "@/hooks/useSiteContent";
 
 const navLinks = [
   { label: "Accueil", href: "#accueil" },
@@ -16,6 +17,9 @@ const navLinks = [
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const brandLine1 = useSiteText("navbar.brand_line_1", "MAMRE TRAINING CENTER");
+  const brandLine2 = useSiteText("navbar.brand_line_2", "Centre de Formation Professionnelle");
+  const cta = useSiteText("navbar.cta", "Appelez-nous");
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b shadow-sm">
@@ -23,8 +27,8 @@ const Navbar = () => {
         <a href="#accueil" className="flex items-center gap-3">
           <img src={logo} alt="MTC Logo" className="h-12 w-12 rounded-full object-cover" />
           <div className="hidden sm:block">
-            <span className="font-heading font-bold text-primary text-sm leading-tight block">MAMRE TRAINING CENTER</span>
-            <span className="text-xs text-muted-foreground">Centre de Formation Professionnelle</span>
+            <span className="font-heading font-bold text-primary text-sm leading-tight block">{brandLine1}</span>
+            <span className="text-xs text-muted-foreground">{brandLine2}</span>
           </div>
         </a>
 
@@ -42,7 +46,7 @@ const Navbar = () => {
             )
           )}
           <a href="tel:+243816029419" className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-4 py-2 rounded-md text-sm font-semibold hover:opacity-90 transition-opacity">
-            <Phone className="h-4 w-4" /> Appelez-nous
+            <Phone className="h-4 w-4" /> {cta}
           </a>
         </div>
 
@@ -67,7 +71,7 @@ const Navbar = () => {
             )
           )}
           <a href="tel:+243816029419" className="mt-3 inline-flex items-center gap-2 bg-primary text-primary-foreground px-4 py-2 rounded-md text-sm font-semibold w-full justify-center">
-            <Phone className="h-4 w-4" /> Appelez-nous
+            <Phone className="h-4 w-4" /> {cta}
           </a>
         </div>
       )}
