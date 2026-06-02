@@ -1,4 +1,5 @@
 import { MapPin } from "lucide-react";
+import { useSiteText } from "@/hooks/useSiteContent";
 
 const sites = [
   {
@@ -22,13 +23,18 @@ const sites = [
   },
 ];
 
-const SitesSection = () => (
+const SitesSection = () => {
+  const eyebrow = useSiteText("sites.eyebrow", "Nos implantations");
+  const title = useSiteText("sites.title", "Nos Sites");
+  const subtitle = useSiteText("sites.subtitle", "Présents dans les principales villes du Haut-Katanga pour vous former au plus près.");
+
+  return (
   <section id="sites" className="section-padding bg-section-light">
     <div className="container mx-auto">
       <div className="text-center mb-12">
-        <p className="text-sm font-semibold uppercase tracking-widest text-red mb-2">Nos implantations</p>
-        <h2 className="font-heading font-bold text-3xl md:text-4xl text-foreground">Nos Sites</h2>
-        <p className="text-muted-foreground mt-3 max-w-xl mx-auto">Présents dans les principales villes du Haut-Katanga pour vous former au plus près.</p>
+        <p className="text-sm font-semibold uppercase tracking-widest text-red mb-2">{eyebrow}</p>
+        <h2 className="font-heading font-bold text-3xl md:text-4xl text-foreground">{title}</h2>
+        <p className="text-muted-foreground mt-3 max-w-xl mx-auto">{subtitle}</p>
       </div>
 
       <div className="grid md:grid-cols-3 gap-6">
@@ -47,6 +53,7 @@ const SitesSection = () => (
       </div>
     </div>
   </section>
-);
+  );
+};
 
 export default SitesSection;
